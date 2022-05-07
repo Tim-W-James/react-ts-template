@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
+import react from '@vitejs/plugin-react'
 import tsconfigPaths from "vite-tsconfig-paths";
 import eslintPlugin from "vite-plugin-eslint";
 import AutoImport from "unplugin-auto-import/vite";
@@ -7,6 +8,7 @@ import AutoImport from "unplugin-auto-import/vite";
 export default defineConfig({
   // https://github.com/vitest-dev/vitest
   plugins: [
+    react(),
     eslintPlugin(),
     AutoImport({
       /// targets to transform
@@ -19,6 +21,7 @@ export default defineConfig({
       imports: [
         // presets
         "vitest",
+        "react",
       ],
 
       // Generate corresponding .eslintrc-auto-import.json file.
@@ -37,8 +40,8 @@ export default defineConfig({
     tsconfigPaths(),
   ],
   test: {
-    include: ["tests/**/*.test.ts"],
-    environment: "jsdom",
+    include: ["tests/**/*.test.ts", "tests/**/*.test.tsx"],
+    environment: "happy-dom",
     globals: true,
     coverage: {
       reporter: ["text", "json", "html"],

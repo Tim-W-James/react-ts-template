@@ -2,6 +2,7 @@
 
 ### Template includes:
 
+* [React](https://reactjs.org/docs/getting-started.html): frontend framework
 * [Vite](https://vitejs.dev/config/): frontend build tool and dev server, configured in `./vite.config.ts`
 * [TypeScript](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): types for js. Configured in `./tsconfig.json`
 * [ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code analyzer with plugins for TypeScript and sonarjs. Configured in `./.eslintrc.json`

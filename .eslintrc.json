@@ -6,7 +6,7 @@
     "ecmaVersion": "latest",
     "ecmaFeatures": {
       "impliedStrict": true,
-      "globalReturn": false
+      "jsx": true
     }
   },
   "env": {
@@ -16,14 +16,18 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime",
     "plugin:sonarjs/recommended",
     "plugin:prettier/recommended",
     "./.eslintrc-auto-import.json"
   ],
-  "plugins": ["@typescript-eslint", "sonarjs", "prettier", "vitest"],
+  "plugins": ["react", "@typescript-eslint", "sonarjs", "prettier", "vitest"],
   "ignorePatterns": ["/*.*"],
   "rules": {
     "@typescript-eslint/quotes": "off",
-    "@typescript-eslint/comma-dangle": "off"
+    "@typescript-eslint/comma-dangle": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-one-expression-per-line": "off"
   }
 }

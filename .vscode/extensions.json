@@ -1,0 +1,15 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=827846
+  // for the documentation about the extensions.json format
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "antfu.vite",
+    "zixuanchen.vitest-explorer",
+    "steoates.autoimport",
+    "aaron-bond.better-comments",
+    "ms-vscode.vscode-typescript-next",
+    "dsznajder.es7-react-js-snippets",
+		"EditorConfig.EditorConfig"
+  ]
+}
