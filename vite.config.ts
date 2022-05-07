@@ -4,11 +4,11 @@ import react from '@vitejs/plugin-react'
 import tsconfigPaths from "vite-tsconfig-paths";
 import eslintPlugin from "vite-plugin-eslint";
 import AutoImport from "unplugin-auto-import/vite";
+import { resolve } from "path";
 
 export default defineConfig({
-  // https://github.com/vitest-dev/vitest
-  plugins: [
-    react(),
+	plugins: [
+		react(),
     eslintPlugin(),
     AutoImport({
       /// targets to transform
@@ -39,6 +39,7 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+	// https://github.com/vitest-dev/vitest
   test: {
     include: ["tests/**/*.test.ts", "tests/**/*.test.tsx"],
     environment: "happy-dom",
