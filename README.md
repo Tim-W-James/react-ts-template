@@ -1,4 +1,4 @@
-## Frontend TS Template
+## React TS Template
 
 ### Template includes:
 
@@ -109,7 +109,7 @@ Complete the configuration checklist below and remove from the README once compl
     project_description
     <br />
 <!--     <a href="https://github.com/Tim-W-James/repo_name"><strong>Explore the docs »</strong></a>
-    <br /> 
+    <br />
     <br /> -->
 <!--     <a href="https://github.com/Tim-W-James/repo_name">View Demo</a> -->
 <!--     ·
@@ -160,7 +160,7 @@ About text.
 
 ### Features
 
-*  
+*
 
 ### Built With
 
