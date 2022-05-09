@@ -67,6 +67,7 @@ Complete the configuration checklist below and remove from the README once compl
     * `"lib": ["<target>", "DOM"]`
 * [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `vite.config.ts` > Plugins > AutoImport
 * [ ] Do you want to commit package-lock? If yes, remove it from the `./.gitignore`
+* [ ] Specify node version in the `.nvmrc`
 * [ ] Run: `npm i`
 * [ ] Finally, remove/modify the sample code:
   * `./src/main.ts`
