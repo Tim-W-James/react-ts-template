@@ -13,6 +13,8 @@
   * `dev` - starts a dev environment on localhost that will reload as files change
   * `build` - compile prod source code to `./dist`
   * `preview` - after build, preview on localhost
+  * `lint` - evaluate ESLint rules against source code
+  * `format` - format source code with prettier and try to fix any ESLint errors
   * `test:run` - run tests
   * `test:ui` - run tests and display on localhost
   * `test` - run unit tests located in `./tests` that will reload whenever files change
