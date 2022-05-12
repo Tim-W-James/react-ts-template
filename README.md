@@ -50,7 +50,7 @@ Complete the configuration checklist below and remove from the README once compl
     * Add to `package.json`: `"type": "module"`
     * Add to `tsconfig.json`:
       * `"module": "ES6"`
-      * `"moduleResolution" : "nodenext`
+      * `"moduleResolution" : "node`
       * `"lib": ["ES6", "DOM"]`
     * Add to `.eslintrc.json`: `"parserOptions": { "sourceType": "module" }`
   * Node CommonJS (require, exports):
