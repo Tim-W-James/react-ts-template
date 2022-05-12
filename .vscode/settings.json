@@ -8,6 +8,7 @@
     "tsconfig.json": "tsconfig.*.json",
     "package.json": "package-lock.json, yarn.lock",
     "README.md": "LICENSE.txt",
-    ".eslintrc.*": ".eslintignore, .prettierrc.*, .eslintrc-auto-import.json"
+    ".eslintrc.*": ".eslintignore, .eslintrc-auto-import.json",
+    ".editorconfig": ".prettierrc.*"
   }
 }
