@@ -1,10 +1,9 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vite";
-import react from '@vitejs/plugin-react'
-import tsconfigPaths from "vite-tsconfig-paths";
-import eslintPlugin from "vite-plugin-eslint";
+import react from "@vitejs/plugin-react";
 import AutoImport from "unplugin-auto-import/vite";
-import { resolve } from "path";
+import { defineConfig } from "vite";
+import eslintPlugin from "vite-plugin-eslint";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
 	plugins: [
