@@ -5,6 +5,7 @@
 * [React](https://reactjs.org/docs/getting-started.html): frontend framework
 * [Vite](https://vitejs.dev/config/): frontend build tool and dev server, configured in `./vite.config.ts`
 * [TypeScript](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): types for js. Configured in `./tsconfig.json`
+* [SASS](https://sass-lang.com/): CSS preprocessor
 * [ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code analyzer with plugins for TypeScript and sonarjs. Configured in `./.eslintrc.json`
 * [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in `./.prettierrc.json`
 * [Vitest](https://vitest.dev/config/): testing framework, configured in `./vite.config.ts` > test
@@ -19,12 +20,7 @@
   * `test:ui` - run tests and display on localhost
   * `test` - run unit tests located in `./tests` that will reload whenever files change
   * `coverage` - run coverage tests and output results to `./coverage`
-
-### Project structure:
-
-* Source code: `./src`
-* Tests: `./tests`
-* Types: `./types`
+* <a href="#project-structure">Project Structure</a>
 
 Complete the configuration checklist below and remove from the README once complete.
 
@@ -75,15 +71,17 @@ Complete the configuration checklist below and remove from the README once compl
 * [ ] Finally, remove/modify the sample code:
   * `./src/*`
   * `./tests/*`
-  * `./favicon.svg`
+  * `./assets/*`
   * `./index.html`
 
 ↑ Remove everything above once setup is complete. ↑
 
+<!-- ! If you can read this comment, please preview this markdown file -->
+
 <!--
 *** README forked from the Best-README-Template: https://github.com/othneildrew/Best-README-Template
 *** Forked by Tim James: https://github.com/Tim-W-James/README-Template
-***
+*** 
 *** See the TODO lists for project setup.
 *** Find a list of resources for writing markdown, etc. at the end of this file.
 -->
@@ -102,7 +100,7 @@ Complete the configuration checklist below and remove from the README once compl
 <br />
 <p align="center">
   <a href="https://github.com/Tim-W-James/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <!-- <img src="images/logo.png" alt="Logo" width="80" height="80"> -->
   </a>
 
   <h2 align="center">project_title</h2>
@@ -128,80 +126,152 @@ Complete the configuration checklist below and remove from the README once compl
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <!-- <li><a href="#roadmap">Goals</a></li> -->
+        <!-- <li><a href="#features">Features</a></li> -->
+        <!-- <li><a href="#built-with">Built With</a></li> -->
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-<!--         <li><a href="#prerequisites">Prerequisites</a></li> -->
+        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-<!--     <li>
+    <li>
         <a href="#usage">Usage</a>
         <ul>
-        <li><a href="#example-usecases">Example Usecases</a></li>
+          <!-- <li><a href="#example-usecases">Example Usecases</a></li> -->
         </ul>
-    </li> -->
-<!--     <li><a href="#roadmap">Roadmap</a></li> -->
-<!--     <li><a href="#contributing">Contributing</a></li> -->
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-<!--     <li><a href="#acknowledgements">Acknowledgements</a></li> -->
+    </li>
+    <li>
+        <a href="#development">Development</a>
+        <ul>
+          <li><a href="#project-structure">Project Structure</a></li>
+          <li><a href="#testing">Testing</a></li>
+          <li><a href="#code-style">Code Style</a></li>
+        </ul>
+    </li>
+    <!-- <li><a href="#contributing">Contributing</a></li> -->
+    <!-- <li><a href="#license">License</a></li> -->
+    <!-- <li><a href="#contact">Contact</a></li> -->
+    <!-- <li><a href="#acknowledgements">Acknowledgements</a></li> -->
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![repo_name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![repo_name Screen Shot][product-screenshot]](https://example.com) -->
 
 About text.
 
-### Features
+### Goals
 
-*
+* Stuff to do
 
-### Built With
+<!-- ### Roadmap
 
-* []()
+See the [open issues](https://github.com/Tim-W-James/repo_name/issues) for a list of proposed features (and known issues). -->
+
+<!-- ### Features
+
+* -->
+
+<!-- ### Built With
+
+* []() -->
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-<!-- ### Prerequisites
+### Prerequisites
 
-* npm
+* Install [`node`](https://nodejs.org/en/) for the version in `.nvmrc` or use [`nvm`](https://github.com/nvm-sh/nvm):
 
   ```sh
-  npm install npm@latest -g
-  ```  -->
+  nvm install
+  nvm use
+  ```
 
 ### Installation
 
 1. Clone the repo
 
-   ```sh
-   git clone https://github.com/Tim-W-James/repo_name.git
-   ```
+  ```sh
+  git clone https://github.com/Tim-W-James/repo_name.git
+  ```
+
+2. Install dependencies
+
+  ```sh
+  npm i
+  ```
 
 <!-- USAGE -->
-<!-- ## Usage
+## Usage
 
-Usage text.
- -->
+* Build to `./dist` and preview:
+
+  ```sh
+  npm run build
+  npm run preview
+  ```
+
 <!-- ### Example Usecases
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
-<!-- ROADMAP -->
-<!-- ## Roadmap
+<!-- DEVELOPMENT -->
+## Development
 
-See the [open issues](https://github.com/Tim-W-James/repo_name/issues) for a list of proposed features (and known issues). -->
+* Start a development environment:
+
+  ```sh
+  npm run dev
+  ```
+
+### Project Structure
+
+* Source code: `./src`
+* Tests: `./tests`
+* Types: `./types`
+* SCSS: `./src/scss`
+* Site assets (images, etc.): `./assets`
+* README images: `./images`
+* Web accessible files: `./public`
+
+### Testing
+
+* Run unit tests located in `./tests` that will reload whenever files change:
+
+  ```sh
+  npm run test
+  ```
+
+* Run coverage tests and output results to `./coverage`:
+
+  ```sh
+  npm run coverage
+  ```
+
+### Code Style
+
+* Evaluate ESLint (`./.eslintrc.json`) rules against source code:
+
+  ```sh
+  npm run lint
+  ```
+
+* Format source code with prettier (`./.prettierrc.json`) and try to fix any
+  ESLint (`./.eslintrc.json`) errors:
+
+  ```sh
+  npm run format
+  ```
 
 <!-- CONTRIBUTING -->
 <!-- ## Contributing
@@ -215,16 +285,16 @@ Contributions are what make the open source community such an amazing place to l
 5. Open a Pull Request -->
 
 <!-- LICENSE -->
-## License
+<!-- ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE` for more information. -->
 
 <!-- CONTACT -->
-## Contact
+<!-- ## Contact
 
 Email: [tim.jameswork9800@gmail.com](mailto:tim.jameswork9800@gmail.com "tim.jameswork9800@gmail.com")
 
-Project Link: [https://github.com/Tim-W-James/repo_name](https://github.com/Tim-W-James/repo_name)
+Project Link: [https://github.com/Tim-W-James/repo_name](https://github.com/Tim-W-James/repo_name) -->
 
 <!-- ACKNOWLEDGEMENTS -->
 <!-- ## Acknowledgements

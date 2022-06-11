@@ -1,5 +1,5 @@
-import logo from "./logo.svg";
-import "./App.css";
+import logo from "../assets/logo.svg";
+import "./scss/App.scss";
 
 function App() {
   const [count, setCount] = useState(0);
