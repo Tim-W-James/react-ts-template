@@ -2,9 +2,9 @@
 
 ### Template includes:
 
-* [React](https://reactjs.org/docs/getting-started.html): frontend framework
+* [React 18](https://reactjs.org/docs/getting-started.html): frontend framework
 * [Vite](https://vitejs.dev/config/): frontend build tool and dev server, configured in `./vite.config.ts`
-* [TypeScript](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): types for js. Configured in `./tsconfig.json`
+* [TypeScript 4.7](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): types for js. Configured in `./tsconfig.json`
 * [SASS](https://sass-lang.com/): CSS preprocessor
 * [ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code analyzer with plugins for TypeScript and sonarjs. Configured in `./.eslintrc.json`
 * [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in `./.prettierrc.json`
@@ -20,6 +20,7 @@
   * `test:ui` - run tests and display on localhost
   * `test` - run unit tests located in `./tests` that will reload whenever files change
   * `coverage` - run coverage tests and output results to `./coverage`
+* Starter React app with [Bootstrap 5](https://react-bootstrap.github.io/getting-started/introduction/) and [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)
 * <a href="#project-structure">Project Structure</a>
 
 Complete the configuration checklist below and remove from the README once complete.
@@ -71,8 +72,10 @@ Complete the configuration checklist below and remove from the README once compl
 * [ ] Finally, remove/modify the sample code:
   * `./src/*`
   * `./tests/*`
-  * `./assets/*`
+  * `./public/assets/*`
   * `./index.html`
+  * And any dependencies you don't need such as `react-router-dom`,
+    `react-bootstrap` or `react-icons`
 
 ↑ Remove everything above once setup is complete. ↑
 
@@ -240,9 +243,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 * Tests: `./tests`
 * Types: `./types`
 * SCSS: `./src/scss`
-* Site assets (images, etc.): `./assets`
-* README images: `./images`
 * Web accessible files: `./public`
+* Site assets (images, etc.): `./public/assets`
+* README images: `./images`
 
 ### Testing
 

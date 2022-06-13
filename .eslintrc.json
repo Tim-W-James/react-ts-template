@@ -59,10 +59,13 @@
     ]
   },
   "rules": {
+    "arrow-body-style": "warn",
+    "react/self-closing-comp": "warn",
     "@typescript-eslint/quotes": "off",
     "@typescript-eslint/comma-dangle": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",
+    "react/prop-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off"
   }
 }
