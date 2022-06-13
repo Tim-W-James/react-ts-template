@@ -1,5 +1,5 @@
 const PrimaryFooter: React.FC = () => (
-  <footer className="footer bg-dark">
+  <footer id="footer" className="bg-dark">
     <div className="container">
       <span className="text-muted">© 2022 Company, Inc</span>
     </div>
