@@ -1,16 +1,16 @@
 import Button from "react-bootstrap/Button";
-import "../scss/Home.scss";
+import "scss/Home.scss";
 import logo from "/assets/logo.svg";
 
 const Home: React.FC = () => {
   const [count, setCount] = useState<number>(0);
 
   return (
-    <div className="Home">
+    <div className="home">
       <header>
-        <img src={logo} className="Home-logo" alt="logo" />
+        <img src={logo} className="home-logo" alt="logo" />
         <p>
-          <Button type="button" onClick={() => setCount((count) => count + 1)}>
+          <Button type="button" onClick={() => setCount((c) => c + 1)}>
             count is: {count}
           </Button>
         </p>
@@ -19,7 +19,7 @@ const Home: React.FC = () => {
         </p>
         <p>
           <a
-            className="Home-link"
+            className="home-link"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
           </a>
           {" | "}
           <a
-            className="Home-link"
+            className="home-link"
             href="https://vitejs.dev/guide/features.html"
             target="_blank"
             rel="noopener noreferrer"
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
           </a>
           <br />
           <a
-            className="Home-link"
+            className="home-link"
             href="https://react-bootstrap.github.io/getting-started/introduction/"
             target="_blank"
             rel="noopener noreferrer"
@@ -46,7 +46,7 @@ const Home: React.FC = () => {
           </a>
           {" | "}
           <a
-            className="Home-link"
+            className="home-link"
             href="https://reactrouter.com/docs/en/v6/getting-started/overview"
             target="_blank"
             rel="noopener noreferrer"

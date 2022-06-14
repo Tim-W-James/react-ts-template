@@ -1,7 +1,7 @@
+import { UserContext } from "context/UserContext";
 import { FormEventHandler } from "react";
 import { Button, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import { BsFillPersonCheckFill } from "react-icons/bs";
-import { UserContext } from "../context/UserContext";
 
 interface FormElements extends HTMLFormControlsCollection {
   firstNameInput: HTMLInputElement;

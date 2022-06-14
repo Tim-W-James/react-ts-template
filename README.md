@@ -12,6 +12,8 @@
 * [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration): global imports, configured in `./vite.config.ts` > Plugins > AutoImport
 * npm scripts (run with `npm run <script>`):
   * `dev` - starts a dev environment on localhost that will reload as files change
+  * `dev:https` - starts a dev environment on localhost over https (requires a
+    cert to be generated)
   * `build` - compile prod source code to `./dist`
   * `preview` - after build, preview on localhost
   * `lint` - evaluate ESLint rules against source code
@@ -64,6 +66,7 @@ Complete the configuration checklist below and remove from the README once compl
     * `"target": "<target>"`
     * `"module": "<target>"`
     * `"lib": ["<target>", "DOM"]`
+  * Append `--target <target>` to the `package.json` build script
 * [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `vite.config.ts` > Plugins > AutoImport
 * [ ] Do you want to commit package-lock? If yes, remove it from the `./.gitignore`
 * [ ] Specify node version in the `.nvmrc`
@@ -263,14 +266,14 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 ### Code Style
 
-* Evaluate ESLint (`./.eslintrc.json`) rules against source code:
+* Evaluate ESLint (`./.eslintrc.json`) and StyleLint (`./.stylelintrc.json`) rules against source code:
 
   ```sh
   npm run lint
   ```
 
 * Format source code with prettier (`./.prettierrc.json`) and try to fix any
-  ESLint (`./.eslintrc.json`) errors:
+  ESLint (`./.eslintrc.json`) or StyleLint (`./.stylelintrc.json`) errors:
 
   ```sh
   npm run format

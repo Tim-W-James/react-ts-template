@@ -1,8 +1,8 @@
+import PrimaryFooter from "components/PrimaryFooter";
+import PrimaryNavbar from "components/PrimaryNavbar";
+import { User, UserContext } from "context/UserContext";
 import { Container } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
-import PrimaryFooter from "./components/PrimaryFooter";
-import PrimaryNavbar from "./components/PrimaryNavbar";
-import { User, UserContext } from "./context/UserContext";
 
 const App = () => {
   const [userState, setUserState] = useState<User | undefined>(undefined);

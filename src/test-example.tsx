@@ -3,6 +3,7 @@ const STATUS = {
   NORMAL: "normal",
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Link = ({ page, children }: any) => {
   const [status, setStatus] = useState(STATUS.NORMAL);
 

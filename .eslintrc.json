@@ -10,14 +10,16 @@
     }
   },
   "env": {
-    "browser": true,
-    "node": true
+    "browser": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:react/recommended",
+    "plugin:import/recommended",
+    "airbnb-typescript",
+    "airbnb/hooks",
     "plugin:sonarjs/recommended",
     "plugin:prettier/recommended",
     "./.eslintrc-auto-import.json"
@@ -59,6 +61,12 @@
     ]
   },
   "rules": {
+    "prefer-arrow-callback": "error",
+    "@typescript-eslint/no-unused-expressions": [
+      "error",
+      { "allowShortCircuit": true, "allowTernary": true }
+    ],
+    "react/prefer-stateless-function": "error",
     "arrow-body-style": "warn",
     "react/self-closing-comp": "warn",
     "@typescript-eslint/quotes": "off",

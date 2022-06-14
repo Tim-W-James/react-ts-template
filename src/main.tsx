@@ -1,11 +1,11 @@
+import App from "App";
+import ExampleForm from "pages/ExampleForm";
+import Home from "pages/Home";
+import NotFound from "pages/NotFound";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import App from "./App";
-import ExampleForm from "./pages/ExampleForm";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import "./scss/index.scss";
+import "scss/index.scss";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
