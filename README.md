@@ -2,82 +2,82 @@
 
 ### Template includes:
 
-* [React 18](https://reactjs.org/docs/getting-started.html): frontend framework
-* [Vite](https://vitejs.dev/config/): frontend build tool and dev server, configured in `./vite.config.ts`
-* [TypeScript 4.7](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): types for js. Configured in `./tsconfig.json`
-* [SASS](https://sass-lang.com/): CSS preprocessor
-* [ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code analyzer with plugins for TypeScript and sonarjs. Configured in `./.eslintrc.json`
-* [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in `./.prettierrc.json`
-* [Vitest](https://vitest.dev/config/): testing framework, configured in `./vite.config.ts` > test
-* [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration): global imports, configured in `./vite.config.ts` > Plugins > AutoImport
-* npm scripts (run with `npm run <script>`):
-  * `dev` - starts a dev environment on localhost that will reload as files change
-  * `dev:https` - starts a dev environment on localhost over https (requires a
+- [React 18](https://reactjs.org/docs/getting-started.html): frontend framework
+- [Vite](https://vitejs.dev/config/): frontend build tool and dev server, configured in `./vite.config.ts`
+- [TypeScript 4.7](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): types for js. Configured in `./tsconfig.json`
+- [SASS](https://sass-lang.com/): CSS preprocessor
+- [ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code analyzer with plugins for TypeScript and sonarjs. Configured in `./.eslintrc.json`
+- [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in `./.prettierrc.json`
+- [Vitest](https://vitest.dev/config/): testing framework, configured in `./vite.config.ts` > test
+- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration): global imports, configured in `./vite.config.ts` > Plugins > AutoImport
+- npm scripts (run with `npm run <script>`):
+  - `dev` - starts a dev environment on localhost that will reload as files change
+  - `dev:https` - starts a dev environment on localhost over https (requires a
     cert to be generated)
-  * `build` - compile prod source code to `./dist`
-  * `preview` - after build, preview on localhost
-  * `lint` - evaluate ESLint rules against source code
-  * `format` - format source code with prettier and try to fix any ESLint errors
-  * `test:run` - run tests
-  * `test:ui` - run tests and display on localhost
-  * `test` - run unit tests located in `./tests` that will reload whenever files change
-  * `coverage` - run coverage tests and output results to `./coverage`
-* Starter React app with [Bootstrap 5](https://react-bootstrap.github.io/getting-started/introduction/) and [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)
-* <a href="#project-structure">Project Structure</a>
+  - `build` - compile prod source code to `./dist`
+  - `preview` - after build, preview on localhost
+  - `lint` - evaluate ESLint rules against source code
+  - `format` - format source code with prettier and try to fix any ESLint errors
+  - `test:run` - run tests
+  - `test:ui` - run tests and display on localhost
+  - `test` - run unit tests located in `./tests` that will reload whenever files change
+  - `coverage` - run coverage tests and output results to `./coverage`
+- Starter React app with [Bootstrap 5](https://react-bootstrap.github.io/getting-started/introduction/) and [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)
+- <a href="#project-structure">Project Structure</a>
 
 Complete the configuration checklist below and remove from the README once complete.
 
 ## TODO - `README.md`
 
-* [ ] Specify the following fields with a search and replace:
-  repo_name, project_title, project_description
-* [ ] Replace personal information with your own:
-  Tim-W-James, tim.jameswork9800@gmail.com, https://linkedin.com/in/timothy-william-james/
-* [ ] Fill out each section of the README as needed, uncommenting/removing sections as needed.
-* [ ] Add images for the following:
-  images/logo.png, images/screenshot.png
-* [ ] Specify the LICENSE.txt for the project
+- [ ] Specify the following fields with a search and replace:
+      repo_name, project_title, project_description
+- [ ] Replace personal information with your own:
+      Tim-W-James, tim.jameswork9800@gmail.com, https://linkedin.com/in/timothy-william-james/
+- [ ] Fill out each section of the README as needed, uncommenting/removing sections as needed.
+- [ ] Add images for the following:
+      images/logo.png, images/screenshot.png
+- [ ] Specify the LICENSE.txt for the project
 
 ## TODO - `package.json`, `tsconfig.json`, `.eslintrc.json`, `.editorconfig`
 
-* [ ] Specify the following fields with a search and replace:
-  repo_name, project_title, project_description, project_keywords
-* [ ] Replace personal information with your own:
-  Tim-W-James, Tim James
+- [ ] Specify the following fields with a search and replace:
+      repo_name, project_title, project_description, project_keywords
+- [ ] Replace personal information with your own:
+    Tim-W-James, Tim James
 <!-- ! Use ESM, the following step is only included for completions sake
      ! If you need to use CJS, see: https://www.typescriptlang.org/docs/handbook/esm-node.html
-* [ ] Set the environment of the project:
-  * ES Modules (import, export):
-    * Add to `package.json`: `"type": "module"`
-    * Add to `tsconfig.json`:
-      * `"module": "ES6"`
-      * `"moduleResolution" : "node`
-      * `"lib": ["ES6", "DOM"]`
-    * Add to `.eslintrc.json`: `"parserOptions": { "sourceType": "module" }`
-  * Node CommonJS (require, exports):
-    * Add to `package.json`: `"type": "commonjs"`
-    * Add to `tsconfig.json`: `"module": "commonjs"`
-    * Add to `.eslintrc.json`: `"parserOptions": { "sourceType": "script" }` -->
-* [ ] Set the target ES version (ES6 - supported by most browsers, ESNext - latest):
-  * `./.eslint.json`:
-    * `"<target>": true`
-    * `"ecmaVersion": <target>`
-  * `./tsconfig.json`:
-    * `"target": "<target>"`
-    * `"module": "<target>"`
-    * `"lib": ["<target>", "DOM"]`
-  * Append `--target <target>` to the `package.json` build script
-* [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `vite.config.ts` > Plugins > AutoImport
-* [ ] Do you want to commit package-lock? If yes, remove it from the `./.gitignore`
-* [ ] Specify node version in the `.nvmrc`
-* [ ] Specify formatting and editor configuration in `./.editorconfig`. Use the `./.prettierrc.json` for js specific rules that are not defined in `./.editorconfig`.
-* [ ] Run: `npm i`
-* [ ] Finally, remove/modify the sample code:
-  * `./src/*`
-  * `./tests/*`
-  * `./public/assets/*`
-  * `./index.html`
-  * And any dependencies you don't need such as `react-router-dom`,
+- [ ] Set the environment of the project:
+  - ES Modules (import, export):
+    - Add to `package.json`: `"type": "module"`
+    - Add to `tsconfig.json`:
+      - `"module": "ES6"`
+      - `"moduleResolution" : "node`
+      - `"lib": ["ES6", "DOM"]`
+    - Add to `.eslintrc.json`: `"parserOptions": { "sourceType": "module" }`
+  - Node CommonJS (require, exports):
+    - Add to `package.json`: `"type": "commonjs"`
+    - Add to `tsconfig.json`: `"module": "commonjs"`
+    - Add to `.eslintrc.json`: `"parserOptions": { "sourceType": "script" }` -->
+- [ ] Set the target ES version (ES6 - supported by most browsers, ESNext - latest):
+  - `./.eslint.json`:
+    - `"<target>": true`
+    - `"ecmaVersion": <target>`
+  - `./tsconfig.json`:
+    - `"target": "<target>"`
+    - `"module": "<target>"`
+    - `"lib": ["<target>", "DOM"]`
+  - Append `--target <target>` to the `package.json` build script
+- [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `vite.config.ts` > Plugins > AutoImport
+- [ ] Do you want to commit package-lock? If yes, remove it from the `./.gitignore`
+- [ ] Specify node version in the `.nvmrc`
+- [ ] Specify formatting and editor configuration in `./.editorconfig`. Use the `./.prettierrc.json` for js specific rules that are not defined in `./.editorconfig`.
+- [ ] Run: `npm i`
+- [ ] Finally, remove/modify the sample code:
+  - `./src/*`
+  - `./tests/*`
+  - `./public/assets/*`
+  - `./index.html`
+  - And any dependencies you don't need such as `react-router-dom`,
     `react-bootstrap` or `react-icons`
 
 ↑ Remove everything above once setup is complete. ↑
@@ -87,7 +87,7 @@ Complete the configuration checklist below and remove from the README once compl
 <!--
 *** README forked from the Best-README-Template: https://github.com/othneildrew/Best-README-Template
 *** Forked by Tim James: https://github.com/Tim-W-James/README-Template
-*** 
+***
 *** See the TODO lists for project setup.
 *** Find a list of resources for writing markdown, etc. at the end of this file.
 -->
@@ -167,6 +167,7 @@ Complete the configuration checklist below and remove from the README once compl
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 <!-- [![repo_name Screen Shot][product-screenshot]](https://example.com) -->
@@ -175,7 +176,7 @@ About text.
 
 ### Goals
 
-* Stuff to do
+- Stuff to do
 
 <!-- ### Roadmap
 
@@ -190,11 +191,12 @@ See the [open issues](https://github.com/Tim-W-James/repo_name/issues) for a lis
 * []() -->
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 ### Prerequisites
 
-* Install [`node`](https://nodejs.org/en/) for the version in `.nvmrc` or use [`nvm`](https://github.com/nvm-sh/nvm):
+- Install [`node`](https://nodejs.org/en/) for the version in `.nvmrc` or use [`nvm`](https://github.com/nvm-sh/nvm):
 
   ```sh
   nvm install && nvm use
@@ -204,20 +206,21 @@ See the [open issues](https://github.com/Tim-W-James/repo_name/issues) for a lis
 
 1. Clone the repo
 
-  ```sh
-  git clone https://github.com/Tim-W-James/repo_name.git
-  ```
+```sh
+git clone https://github.com/Tim-W-James/repo_name.git
+```
 
 2. Install dependencies
 
-  ```sh
-  npm i
-  ```
+```sh
+npm i
+```
 
 <!-- USAGE -->
+
 ## Usage
 
-* Build to `./dist` and preview:
+- Build to `./dist` and preview:
 
   ```sh
   npm run build
@@ -231,9 +234,10 @@ Use this space to show useful examples of how a project can be used. Additional 
 _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <!-- DEVELOPMENT -->
+
 ## Development
 
-* Start a development environment:
+- Start a development environment:
 
   ```sh
   npm run dev
@@ -241,23 +245,23 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 ### Project Structure
 
-* Source code: `./src`
-* Tests: `./tests`
-* Types: `./types`
-* SCSS: `./src/scss`
-* Web accessible files: `./public`
-* Site assets (images, etc.): `./public/assets`
-* README images: `./images`
+- Source code: `./src`
+- Tests: `./tests`
+- Types: `./types`
+- SCSS: `./src/scss`
+- Web accessible files: `./public`
+- Site assets (images, etc.): `./public/assets`
+- README images: `./images`
 
 ### Testing
 
-* Run unit tests located in `./tests` that will reload whenever files change:
+- Run unit tests located in `./tests` that will reload whenever files change:
 
   ```sh
   npm run test
   ```
 
-* Run coverage tests and output results to `./coverage`:
+- Run coverage tests and output results to `./coverage`:
 
   ```sh
   npm run coverage
@@ -265,13 +269,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 ### Code Style
 
-* Evaluate ESLint (`./.eslintrc.json`) and StyleLint (`./.stylelintrc.json`) rules against source code:
+- Evaluate ESLint (`./.eslintrc.json`) and StyleLint (`./.stylelintrc.json`) rules against source code:
 
   ```sh
   npm run lint
   ```
 
-* Format source code with prettier (`./.prettierrc.json`) and try to fix any
+- Format source code with prettier (`./.prettierrc.json`) and try to fix any
   ESLint (`./.eslintrc.json`) or StyleLint (`./.stylelintrc.json`) errors:
 
   ```sh
@@ -310,6 +314,7 @@ Project Link: [https://github.com/Tim-W-James/repo_name](https://github.com/Tim-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [release-shield]: https://img.shields.io/github/v/release/Tim-W-James/repo_name.svg?include_prereleases&style=for-the-badge
 [release-url]: https://github.com/Tim-W-James/repo_name/releases
 [last-commit-shield]: https://img.shields.io/github/last-commit/Tim-W-James/repo_name.svg?style=for-the-badge

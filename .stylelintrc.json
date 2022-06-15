@@ -23,6 +23,9 @@
     "length-zero-no-unit": true,
     "font-weight-notation": "named-where-possible",
     "declaration-no-important": true,
-    "alpha-value-notation": ["percentage", { "exceptProperties": ["opacity"] }]
-  }
+    "alpha-value-notation": ["percentage", { "exceptProperties": ["opacity"] }],
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-order": ["width", "height"]
+  },
+  "plugins": ["stylelint-order"]
 }

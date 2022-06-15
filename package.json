@@ -30,18 +30,20 @@
     "coverage": "vitest run --coverage"
   },
   "lint-staged": {
-    "./src/**/*.{tsx,ts}": [
+    "./src/**/*.{tsx}": [
       "eslint --fix",
       "eslint"
     ],
-    "./tests/**/*.{tsx,ts}": [
+    "./tests/**/*.{tsx}": [
       "eslint --fix",
       "eslint"
     ],
     "./src/**/*.{css,scss}": [
       "stylelint --fix",
       "stylelint"
-    ]
+    ],
+    "*.md": "prettier --write",
+    "*.{json,ts}": "prettier --write"
   },
   "devDependencies": {
     "@types/node": "^17.0.38",
@@ -77,6 +79,7 @@
     "stylelint": "^14.9.1",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-order": "^5.0.0",
     "ts-node": "^10.8.0",
     "typescript": "^4.7.2",
     "unplugin-auto-import": "^0.8.6",
