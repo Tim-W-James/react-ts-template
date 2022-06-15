@@ -1,11 +1,18 @@
 /// <reference types="vitest" />
 import react from "@vitejs/plugin-react";
+import * as path from "path";
 import AutoImport from "unplugin-auto-import/vite";
 import { defineConfig } from "vite";
 import eslintPlugin from "vite-plugin-eslint";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
+  // define paths relative to the ./public directory here
+  resolve: {
+    alias: {
+      "@assets": path.resolve(__dirname, "/assets"),
+    },
+  },
   plugins: [
     react(),
     eslintPlugin(),

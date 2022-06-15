@@ -197,8 +197,7 @@ See the [open issues](https://github.com/Tim-W-James/repo_name/issues) for a lis
 * Install [`node`](https://nodejs.org/en/) for the version in `.nvmrc` or use [`nvm`](https://github.com/nvm-sh/nvm):
 
   ```sh
-  nvm install
-  nvm use
+  nvm install && nvm use
   ```
 
 ### Installation

@@ -1,6 +1,6 @@
 // @vitest-environment happy-dom
 import renderer from "react-test-renderer";
-import Link from "../src/test-example";
+import Link from "test-example";
 
 function toJson(component: renderer.ReactTestRenderer) {
   const result = component.toJSON();

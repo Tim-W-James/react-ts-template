@@ -1,6 +1,6 @@
+import logo from "@assets/logo.svg";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "/assets/logo.svg";
 
 const PrimaryNavbar: React.FC = () => (
   <Navbar bg="dark" variant="dark" expand="lg" sticky="top">

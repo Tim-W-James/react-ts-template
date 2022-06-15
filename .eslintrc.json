@@ -24,7 +24,7 @@
     "plugin:prettier/recommended",
     "./.eslintrc-auto-import.json"
   ],
-  "plugins": ["react", "@typescript-eslint", "sonarjs", "prettier", "vitest"],
+  "plugins": ["react", "@typescript-eslint", "sonarjs", "prettier"],
   "ignorePatterns": ["/*.*"],
   "settings": {
     "react": {
@@ -73,7 +73,6 @@
     "@typescript-eslint/comma-dangle": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",
-    "react/prop-types": "off",
-    "@typescript-eslint/no-non-null-assertion": "off"
+    "react/prop-types": "off"
   }
 }
