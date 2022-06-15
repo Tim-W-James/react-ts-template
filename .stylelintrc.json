@@ -1,7 +1,8 @@
 {
   "extends": [
     "stylelint-config-standard-scss",
-    "stylelint-config-prettier-scss"
+    "stylelint-config-prettier-scss",
+    "stylelint-config-idiomatic-order"
   ],
   "rules": {
     "unit-allowed-list": [
@@ -23,9 +24,7 @@
     "length-zero-no-unit": true,
     "font-weight-notation": "named-where-possible",
     "declaration-no-important": true,
-    "alpha-value-notation": ["percentage", { "exceptProperties": ["opacity"] }],
-    "order/order": ["custom-properties", "declarations"],
-    "order/properties-order": ["width", "height"]
+    "alpha-value-notation": ["percentage", { "exceptProperties": ["opacity"] }]
   },
   "plugins": ["stylelint-order"]
 }
