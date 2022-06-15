@@ -2,14 +2,14 @@
 
 body {
   margin: 0;
+  margin-bottom: 5rem;
+    background-color: hsl(220deg 13% 18%);
+  color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: hsl(220deg 13% 18%);
-  color: white;
-  margin-bottom: 5rem;
 }
 
 header {
@@ -26,11 +26,11 @@ code {
 }
 
 #footer {
-  margin-top: 1rem;
-  padding: 1rem;
-  text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
 }
