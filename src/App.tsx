@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <>
-    <PrimaryNavbar />
+      <PrimaryNavbar />
       <UserContext.Provider value={{ userState, setUserState }}>
         <Container className="mt-3">
           <Outlet />
