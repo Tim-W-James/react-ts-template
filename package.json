@@ -29,6 +29,16 @@
     "test:run": "vitest run",
     "coverage": "vitest run --coverage"
   },
+  "lint-staged": {
+    "*.{tsx,ts}": [
+      "eslint --fix",
+      "eslint"
+    ],
+    "./src/**/*.{css,scss}": [
+      "stylelint --fix",
+      "stylelint"
+    ]
+  },
   "devDependencies": {
     "@types/node": "^17.0.38",
     "@types/react": "^18.0.10",
@@ -56,6 +66,7 @@
     "happy-dom": "^5.0.0",
     "husky": "^8.0.1",
     "jsdom": "^19.0.0",
+    "lint-staged": "^13.0.1",
     "prettier": "^2.6.2",
     "react-test-renderer": "^18.1.0",
     "sass": "^1.52.3",
