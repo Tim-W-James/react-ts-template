@@ -30,11 +30,11 @@
     "coverage": "vitest run --coverage"
   },
   "lint-staged": {
-    "./src/**/*.{tsx}": [
+    "./src/**/*.tsx": [
       "eslint --fix",
       "eslint"
     ],
-    "./tests/**/*.{tsx}": [
+    "./tests/**/*.tsx": [
       "eslint --fix",
       "eslint"
     ],
