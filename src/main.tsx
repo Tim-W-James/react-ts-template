@@ -24,5 +24,5 @@ createRoot(document.getElementById("root")!).render(
         </Route>
       </Routes>
     </Router>
-  </StrictMode>,
+  </StrictMode>
 );
