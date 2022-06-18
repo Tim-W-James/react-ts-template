@@ -24,6 +24,12 @@ module.exports = {
     "length-zero-no-unit": true,
     "font-weight-notation": "named-where-possible",
     "declaration-no-important": true,
+    "no-descending-specificity": [
+      true,
+      {
+        ignore: ["selectors-within-list"],
+      },
+    ],
     "alpha-value-notation": ["percentage", { exceptProperties: ["opacity"] }],
   },
   plugins: ["stylelint-order"],
