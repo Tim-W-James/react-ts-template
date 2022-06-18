@@ -8,7 +8,7 @@
     "package.json": "package-lock.json, yarn.lock",
     "README.md": "LICENSE.txt",
     ".eslintrc.*": ".eslintignore, .eslintrc-auto-import.json",
-    ".editorconfig": ".prettierrc.*"
+    ".editorconfig": ".prettierrc.*, .prettierignore"
   },
   "stylelint.validate": ["css", "less", "postcss", "scss"],
   "markdownlint.config": {

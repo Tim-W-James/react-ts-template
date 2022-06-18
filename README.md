@@ -13,10 +13,10 @@ starter app using Bootstrap Components and React Router 6.
 - [TypeScript 4.7](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): types for js. Configured in `./tsconfig.json`
 - [SASS](https://sass-lang.com/): CSS preprocessor
 - [ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code
-  analyzer for TypeScript. Configured in `./.eslintrc.json` with
+  analyzer for TypeScript. Configured in `./.eslintrc.cjs` with
   rules from AirBnB and SonarJS.
-- [Stylelint](https://stylelint.io/): Linter/code analyzer for SCSS. Configured in `./.stylelintrc.json`
-- [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in `./.prettierrc.json`
+- [Stylelint](https://stylelint.io/): Linter/code analyzer for SCSS. Configured in `./.stylelintrc.cjs`
+- [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in `./.prettierrc.cjs`
 - [Vitest](https://vitest.dev/config/): testing framework, configured in `./vite.config.ts` > test
 - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration):
   global imports. Configured in `./vite.config.ts` > Plugins > AutoImport
@@ -42,21 +42,17 @@ Complete the configuration checklist below and remove from the README once compl
 ## TODO
 
 - [ ] If using VSCode, install recommended extensions with the command pallet: `Extensions:Show Recommended Extensions`. Otherwise, use install an[`EditorConfig`](https://editorconfig.org/#download) plugin for your text editor or IDE of choice
-- [ ] `README.md` - there is a README template [below](#top) based on the [Best-README-Template](https://github.com/othneildrew/Best-README-Template). Find a list of resources to help you write READMEs in a comment at the end of this file. Fill out the following:
-  - [ ] Specify the following fields with a search and replace:
-        repo_name, project_title, project_description
-  - [ ] Replace personal information with your own:
-        Tim-W-James, tim.jameswork9800@gmail.com, https://linkedin.com/in/timothy-william-james/
-  - [ ] Fill out each section of the README as needed, uncommenting/removing sections as needed.
-  - [ ] Add images for the following:
-        images/logo.png, images/screenshot.png
-  - [ ] Specify the LICENSE.txt for the project
 - [ ] Specify the following fields with a search and replace:
       repo_name, project_title, project_description, project_keywords
 - [ ] Replace personal information with your own:
-    Tim-W-James, Tim James
-<!-- ! Use ESM where possible
-     ! If you need to use CJS, see: https://www.typescriptlang.org/docs/handbook/esm-node.html
+      Tim-W-James, Tim James, tim.jameswork9800@gmail.com, https://linkedin.com/in/timothy-william-james/
+- [ ] Specify the LICENSE.txt for the project
+- [ ] `README.md` - there is a README template [below](#top) based on the [Best-README-Template](https://github.com/othneildrew/Best-README-Template). Find a list of resources to help you write READMEs in a comment at the end of this file. Fill out the following:
+  - [ ] Fill out each section of the README as needed, uncommenting/removing sections as needed.
+  - [ ] Add images for the following:
+      images/logo.png, images/screenshot.png
+  <!-- ! Use ESM where possible
+       ! If you need to use CJS, see: https://www.typescriptlang.org/docs/handbook/esm-node.html
 - [ ] Set the environment of the project:
   - ES Modules (import, export):
     - Add to `package.json`: `"type": "module"`
@@ -64,13 +60,13 @@ Complete the configuration checklist below and remove from the README once compl
       - `"module": "ES6"`
       - `"moduleResolution" : "node`
       - `"lib": ["ES6", "DOM"]`
-    - Add to `.eslintrc.json`: `"parserOptions": { "sourceType": "module" }`
+    - Add to `.eslintrc.cjs`: `"parserOptions": { "sourceType": "module" }`
   - Node CommonJS (require, exports):
     - Add to `package.json`: `"type": "commonjs"`
     - Add to `tsconfig.json`: `"module": "commonjs"`
-    - Add to `.eslintrc.json`: `"parserOptions": { "sourceType": "script" }` -->
+    - Add to `.eslintrc.cjs`: `"parserOptions": { "sourceType": "script" }` -->
 - [ ] Set the target ES version (ES6 - supported by most browsers, ESNext - latest):
-  - `./.eslint.json`:
+  - `./.eslint.cjs`:
     - `"<target>": true`
     - `"ecmaVersion": <target>`
   - `./tsconfig.json`:
@@ -81,7 +77,7 @@ Complete the configuration checklist below and remove from the README once compl
 - [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `vite.config.ts` > Plugins > AutoImport
 - [ ] Do you want to commit package-lock? If yes, remove it from the `./.gitignore`
 - [ ] Specify node version in the `.nvmrc`
-- [ ] Specify formatting and editor configuration in `./.editorconfig`. Use the `./.prettierrc.json` for js specific rules that are not defined in `./.editorconfig`.
+- [ ] Specify formatting and editor configuration in `./.editorconfig`. Use the `./.prettierrc.cjs` for js specific rules that are not defined in `./.editorconfig`.
 - [ ] Run: `npm i`
 - [ ] Finally, remove/modify the sample code:
   - `./src/*`
@@ -280,14 +276,14 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 ### Code Style
 
-- Evaluate ESLint (`./.eslintrc.json`) and StyleLint (`./.stylelintrc.json`) rules against source code:
+- Evaluate ESLint (`./.eslintrc.cjs`) and StyleLint (`./.stylelintrc.cjs`) rules against source code:
 
   ```sh
   npm run lint
   ```
 
-- Format source code with prettier (`./.prettierrc.json`) and try to fix any
-  ESLint (`./.eslintrc.json`) or StyleLint (`./.stylelintrc.json`) errors:
+- Format source code with prettier (`./.prettierrc.cjs`) and try to fix any
+  ESLint (`./.eslintrc.cjs`) or StyleLint (`./.stylelintrc.cjs`) errors:
 
   ```sh
   npm run format
