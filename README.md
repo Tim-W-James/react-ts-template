@@ -1,15 +1,25 @@
 ## React TS Template
 
+Opinionated template for frontend React TypeScript projects with Vite, ESLint,
+Prettier, Vitetest, and various Node packages. This template aims to speed up
+the initial configuration and boilerplate for new projects, while providing
+integration with a range of modern tooling. This repo also includes a React
+starter app using Bootstrap Components and React Router 6.
+
 ### Template includes:
 
 - [React 18](https://reactjs.org/docs/getting-started.html): frontend framework
 - [Vite](https://vitejs.dev/config/): frontend build tool and dev server, configured in `./vite.config.ts`
 - [TypeScript 4.7](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): types for js. Configured in `./tsconfig.json`
 - [SASS](https://sass-lang.com/): CSS preprocessor
-- [ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code analyzer with plugins for TypeScript and sonarjs. Configured in `./.eslintrc.json`
+- [ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code
+  analyzer for TypeScript. Configured in `./.eslintrc.json` with
+  rules from AirBnB and SonarJS.
+- [Stylelint](https://stylelint.io/): Linter/code analyzer for SCSS. Configured in `./.stylelintrc.json`
 - [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in `./.prettierrc.json`
 - [Vitest](https://vitest.dev/config/): testing framework, configured in `./vite.config.ts` > test
-- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration): global imports, configured in `./vite.config.ts` > Plugins > AutoImport
+- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration):
+  global imports. Configured in `./vite.config.ts` > Plugins > AutoImport
 - npm scripts (run with `npm run <script>`):
   - `dev` - starts a dev environment on localhost that will reload as files change
   - `dev:https` - starts a dev environment on localhost over https (requires a
@@ -22,29 +32,30 @@
   - `test:ui` - run tests and display on localhost
   - `test` - run unit tests located in `./tests` that will reload whenever files change
   - `coverage` - run coverage tests and output results to `./coverage`
+- [Husky](https://github.com/typicode/husky): pre-commit Git hooks to lint,
+  format and run tests. Configured in `./.husky`
 - Starter React app with [Bootstrap 5](https://react-bootstrap.github.io/getting-started/introduction/) and [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)
 - <a href="#project-structure">Project Structure</a>
 
 Complete the configuration checklist below and remove from the README once complete.
 
-## TODO - `README.md`
+## TODO
 
-- [ ] Specify the following fields with a search and replace:
-      repo_name, project_title, project_description
-- [ ] Replace personal information with your own:
-      Tim-W-James, tim.jameswork9800@gmail.com, https://linkedin.com/in/timothy-william-james/
-- [ ] Fill out each section of the README as needed, uncommenting/removing sections as needed.
-- [ ] Add images for the following:
-      images/logo.png, images/screenshot.png
-- [ ] Specify the LICENSE.txt for the project
-
-## TODO - `package.json`, `tsconfig.json`, `.eslintrc.json`, `.editorconfig`
-
+- [ ] If using VSCode, install recommended extensions with the command pallet: `Extensions:Show Recommended Extensions`. Otherwise, use install an[`EditorConfig`](https://editorconfig.org/#download) plugin for your text editor or IDE of choice
+- [ ] `README.md` - there is a README template [below](#top) based on the [Best-README-Template](https://github.com/othneildrew/Best-README-Template). Find a list of resources to help you write READMEs in a comment at the end of this file. Fill out the following:
+  - [ ] Specify the following fields with a search and replace:
+        repo_name, project_title, project_description
+  - [ ] Replace personal information with your own:
+        Tim-W-James, tim.jameswork9800@gmail.com, https://linkedin.com/in/timothy-william-james/
+  - [ ] Fill out each section of the README as needed, uncommenting/removing sections as needed.
+  - [ ] Add images for the following:
+        images/logo.png, images/screenshot.png
+  - [ ] Specify the LICENSE.txt for the project
 - [ ] Specify the following fields with a search and replace:
       repo_name, project_title, project_description, project_keywords
 - [ ] Replace personal information with your own:
     Tim-W-James, Tim James
-<!-- ! Use ESM, the following step is only included for completions sake
+<!-- ! Use ESM where possible
      ! If you need to use CJS, see: https://www.typescriptlang.org/docs/handbook/esm-node.html
 - [ ] Set the environment of the project:
   - ES Modules (import, export):
@@ -82,7 +93,7 @@ Complete the configuration checklist below and remove from the README once compl
 
 ↑ Remove everything above once setup is complete. ↑
 
-<!-- ! If you can read this comment, please preview this markdown file -->
+<!-- ! If you can read this comment, please preview this file with a markdown renderer -->
 
 <!--
 *** README forked from the Best-README-Template: https://github.com/othneildrew/Best-README-Template
@@ -109,7 +120,7 @@ Complete the configuration checklist below and remove from the README once compl
     <!-- <img src="images/logo.png" alt="Logo" width="80" height="80"> -->
   </a>
 
-  <h2 align="center">project_title</h2>
+  <h2 align="center" id="top">project_title</h2>
 
   <p align="center">
     project_description
@@ -311,6 +322,8 @@ Project Link: [https://github.com/Tim-W-James/repo_name](https://github.com/Tim-
 * []()
 * []()
 * []() -->
+
+<a href="#top">↑ Back to Top ↑</a>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
