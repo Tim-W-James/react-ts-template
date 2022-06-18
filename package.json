@@ -23,7 +23,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview --host",
     "lint": "eslint src && stylelint './src/**/*.{css,scss}'",
-    "format": "eslint src --fix && stylelint './src/**/*.{css,scss}' --fix",
+    "format": "eslint src --fix && stylelint './src/**/*.{css,scss}' --fix && prettier --write '*.{json,ts,js,cjs,md}'",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
@@ -43,7 +43,7 @@
       "stylelint"
     ],
     "*.md": "prettier --write",
-    "*.{json,ts}": "prettier --write"
+    "*.{json,ts,js,cjs}": "prettier --write"
   },
   "devDependencies": {
     "@types/node": "^17.0.38",

@@ -1,10 +1,10 @@
-{
-  "extends": [
+module.exports = {
+  extends: [
     "stylelint-config-standard-scss",
     "stylelint-config-prettier-scss",
-    "stylelint-config-idiomatic-order"
+    "stylelint-config-idiomatic-order",
   ],
-  "rules": {
+  rules: {
     "unit-allowed-list": [
       "em",
       "rem",
@@ -16,7 +16,7 @@
       "px",
       "%",
       "s",
-      "deg"
+      "deg",
     ],
     "color-named": "always-where-possible",
     "color-no-hex": true,
@@ -24,7 +24,8 @@
     "length-zero-no-unit": true,
     "font-weight-notation": "named-where-possible",
     "declaration-no-important": true,
-    "alpha-value-notation": ["percentage", { "exceptProperties": ["opacity"] }]
+    "alpha-value-notation": ["percentage", { exceptProperties: ["opacity"] }],
   },
-  "plugins": ["stylelint-order"]
-}
+  plugins: ["stylelint-order"],
+  ignoreFiles: ["./dist"],
+};
