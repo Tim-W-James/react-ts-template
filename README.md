@@ -78,7 +78,8 @@ Complete the configuration checklist below and remove from the README once compl
 - [ ] Do you want to commit package-lock? If yes, remove it from the `./.gitignore`. Otherwise, consider using [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable)
 - [ ] Specify node version in the `.nvmrc`
 - [ ] Specify formatting and editor configuration in `./.editorconfig`. Use the `./.prettierrc.cjs` for js specific rules that are not defined in `./.editorconfig`.
-- [ ] Run: `npm i`
+- [ ] Run: `npm i` (or `yarn install` if using [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable))
+- [ ] Setup Git hooks (Husky): `npm run prepare`
 - [ ] Finally, remove/modify the sample code:
   - `./src/*`
   - `./tests/*`

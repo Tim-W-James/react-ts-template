@@ -18,6 +18,7 @@
   "type": "module",
   "main": "src/main.ts",
   "scripts": {
+    "prepare": "husky install",
     "dev": "vite --open",
     "dev:https": "vite --open --https",
     "build": "tsc && vite build",
