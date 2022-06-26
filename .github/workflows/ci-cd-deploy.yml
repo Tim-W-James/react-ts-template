@@ -6,11 +6,16 @@ name: CI
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - "**.md"
   pull_request:
     branches: ["main"]
+    paths-ignore:
+      - "**.md"
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,19 +24,26 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - name: install dependencies
+
+      - name: Install Dependencies
         run: npm i
-      - name: check for vulnerabilities
+
+      - name: Check for Vulnerabilities
         run: npm audit --audit-level=high
-      - name: lint
+
+      - name: Lint
         run: npm run lint
-      - name: run tests
+
+      - name: Run Tests
         run: npm test
-      - name: build
+
+      - name: Build
         run: npm run build --if-present

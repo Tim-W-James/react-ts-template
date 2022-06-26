@@ -101,6 +101,7 @@ Complete the configuration checklist below and remove from the README once compl
 -->
 
 <!-- PROJECT SHIELDS -->
+<!-- [![CI][ci-shield]][ci-url] -->
 <!-- [![Release][release-shield]][release-url] -->
 <!-- [![Last Commit][last-commit-shield]][last-commit-url] -->
 <!-- [![Contributors][contributors-shield]][contributors-url] -->
@@ -324,14 +325,16 @@ Project Link: [https://github.com/Tim-W-James/repo_name](https://github.com/Tim-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!-- Shields: https://shields.io -->
+<!-- Icons: https://github.com/simple-icons/simple-icons/blob/develop/slugs.md -->
 
+[ci-shield]: https://img.shields.io/github/workflow/status/Tim-W-James/repo_name/CI?style=for-the-badge&logo=githubactions&logoColor=white
+[ci-url]: https://github.com/Tim-W-James/repo_name/actions
 [release-shield]: https://img.shields.io/github/v/release/Tim-W-James/repo_name.svg?include_prereleases&style=for-the-badge
 [release-url]: https://github.com/Tim-W-James/repo_name/releases
-[last-commit-shield]: https://img.shields.io/github/last-commit/Tim-W-James/repo_name.svg?style=for-the-badge
+[last-commit-shield]: https://img.shields.io/github/last-commit/Tim-W-James/repo_name.svg?style=for-the-badge&logo=git&logoColor=white
 [last-commit-url]: https://github.com/Tim-W-James/repo_name/commits/main
-[contributors-shield]: https://img.shields.io/github/contributors/Tim-W-James/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/Tim-W-James/repo_name/graphs/contributors
-[contributors-shield]: https://img.shields.io/github/contributors/Tim-W-James/repo_name.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/Tim-W-James/repo_name.svg?style=for-the-badge&logo=github&logoColor=white
 [contributors-url]: https://github.com/Tim-W-James/repo_name/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Tim-W-James/repo_name.svg?style=for-the-badge
 [forks-url]: https://github.com/Tim-W-James/repo_name/network/members
@@ -339,7 +342,7 @@ Project Link: [https://github.com/Tim-W-James/repo_name](https://github.com/Tim-
 [stars-url]: https://github.com/Tim-W-James/repo_name/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Tim-W-James/repo_name.svg?style=for-the-badge
 [issues-url]: https://github.com/Tim-W-James/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/Tim-W-James/repo_name?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/Tim-W-James/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/Tim-W-James/repo_name/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/timothy-william-james/
@@ -350,6 +353,7 @@ Project Link: [https://github.com/Tim-W-James/repo_name](https://github.com/Tim-
 * https://www.markdownguide.org/basic-syntax
 * https://www.webpagefx.com/tools/emoji-cheat-sheet
 * https://shields.io
+* https://github.com/simple-icons/simple-icons/blob/develop/slugs.md
 * https://choosealicense.com
 * https://pages.github.com
 * https://daneden.github.io/animate.css
