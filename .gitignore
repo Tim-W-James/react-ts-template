@@ -1,5 +1,5 @@
 # Dependency directories
-package-lock.json
+# package-lock.json # uncomment this line if you don't want to commit package-lock
 node_modules/
 jspm_packages/
 

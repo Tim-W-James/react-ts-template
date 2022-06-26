@@ -75,8 +75,7 @@ Complete the configuration checklist below and remove from the README once compl
     - `"lib": ["<target>", "DOM"]`
   - Append `--target <target>` to the `package.json` build script
 - [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `vite.config.ts` > Plugins > AutoImport
-- [ ] Do you want to commit package-lock? If yes, remove it from the
-      `./.gitignore` and change the GitHub Action step "install dependencies" from `npm i` to `npm ci`. Otherwise, consider using [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable)
+- [ ] Do you want to commit package-lock? If not, add it to the `./.gitignore` and change the GitHub Action step "install dependencies" from `npm ci` to `npm i`. Also consider using [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable)
 - [ ] Specify node version in the `.nvmrc`
 - [ ] Specify formatting and editor configuration in `./.editorconfig`. Use the `./.prettierrc.cjs` for js specific rules that are not defined in `./.editorconfig`.
 - [ ] Run: `npm i` (or `yarn` if using [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable))
