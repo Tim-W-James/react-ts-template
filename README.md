@@ -18,8 +18,7 @@ starter app using Bootstrap Components and React Router 6.
 - [Stylelint](https://stylelint.io/): Linter/code analyzer for SCSS. Configured in `./.stylelintrc.cjs`
 - [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in `./.prettierrc.cjs`
 - [Vitest](https://vitest.dev/config/): testing framework, configured in `./vite.config.ts` > test
-- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration):
-  global imports. Configured in `./vite.config.ts` > Plugins > AutoImport
+- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration): global imports. Configured in `./vite.config.ts` > Plugins > AutoImport
 - npm scripts (run with `npm run <script>`):
   - `dev` - starts a dev environment on localhost that will reload as files change
   - `dev:https` - starts a dev environment on localhost over https (requires a
@@ -32,8 +31,8 @@ starter app using Bootstrap Components and React Router 6.
   - `test:ui` - run tests and display on localhost
   - `test` - run unit tests located in `./tests` that will reload whenever files change
   - `coverage` - run coverage tests and output results to `./coverage`
-- [Husky](https://github.com/typicode/husky): pre-commit Git hooks to lint,
-  format and run tests. Configured in `./.husky`
+- [Husky](https://github.com/typicode/husky): pre-commit Git hooks to lint, format and run tests. Configured in `./.husky`
+- [GitHub Actions](https://docs.github.com/en/actions): CI/CD pipeline. Configured in `./.github/workflows`
 - Starter React app with [Bootstrap 5](https://react-bootstrap.github.io/getting-started/introduction/) and [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)
 - <a href="#project-structure">Project Structure</a>
 
@@ -80,6 +79,7 @@ Complete the configuration checklist below and remove from the README once compl
 - [ ] Specify formatting and editor configuration in `./.editorconfig`. Use the `./.prettierrc.cjs` for js specific rules that are not defined in `./.editorconfig`.
 - [ ] Run: `npm i` (or `yarn` if using [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable))
 - [ ] Setup Git hooks (Husky): `npm run prepare`
+- [ ] Add continuous deployment workflow to `./.github/workflows`
 - [ ] Finally, remove/modify the sample code:
   - `./src/*`
   - `./tests/*`
