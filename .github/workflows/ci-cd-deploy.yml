@@ -5,34 +5,33 @@ name: Node.js CI/CD Build & Deployment
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - name: install dependencies
-      run: npm ci
-    - name: check for vulnerabilities
-      run: npm audit --audit-level=high
-    - name: lint
-      run: npm run lint
-    - name: run tests
-      run: npm test
-    - name: build
-      run: npm run build --if-present
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - name: install dependencies
+        run: npm i
+      - name: check for vulnerabilities
+        run: npm audit --audit-level=high
+      - name: lint
+        run: npm run lint
+      - name: run tests
+        run: npm test
+      - name: build
+        run: npm run build --if-present
