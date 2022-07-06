@@ -34,7 +34,8 @@ starter app using Bootstrap Components and React Router 6.
 - [Husky](https://github.com/typicode/husky): pre-commit Git hooks to lint, format and run tests. Configured in `./.husky`
 - [GitHub Actions](https://docs.github.com/en/actions): CI/CD pipeline. Configured in `./.github/workflows`
 - Starter React app with [Bootstrap 5](https://react-bootstrap.github.io/getting-started/introduction/) and [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)
-- <a href="#project-structure">Project Structure</a>
+- [Renovate](https://github.com/marketplace/renovate): GitHub bot for automatic dependency updates. Configured in `./renovate.json`
+- See the <a href="#project-structure">Project Structure</a>
 
 Complete the configuration checklist below and remove from the README once complete.
 
@@ -77,7 +78,7 @@ Complete the configuration checklist below and remove from the README once compl
 - [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `./vite.config.ts` > Plugins > AutoImport
 - [ ] Specify node version in the `./.nvmrc` and `./package.json` > `engines` > `node`
 - [ ] This repo is configured for the `pnpm` package manager. If you wish to change this to [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable) or `npm`, configure the following:
-  - Modify `./package.json` > `engines` and `packageManager` to refer to the version of the package manager you are using
+  - Modify `./package.json` > `engines`, `./package.json` > `packageManager` and `./renovate.json` > `compatibility` to refer to the version of the package manager you are using
   - Modify the GitHub actions in `./.github/workflows` to install your package manager (if using something other than `npm`), use it in pipeline steps, and cache
   - Modify any scripts that call `pnpm` in `./package.json` > `scripts`
   - Modify any Git hooks that call `pnpm` in `./.husky/pre-commit`
@@ -93,6 +94,7 @@ Complete the configuration checklist below and remove from the README once compl
   - `npm`: `npm ci` (lockfile) or `npm i` (no lockfile)
 - [ ] Install Git hooks if needed (this should happen automatically when dependencies are installed): `husky install`
 - [ ] Add continuous deployment workflow to `./.github/workflows` as needed
+- [ ] Install the [Renovate](https://github.com/marketplace/renovate) bot on GitHub for automatic dependency updates
 - [ ] Finally, remove/modify the sample code:
   - `./src/*`
   - `./public/assets/*`
