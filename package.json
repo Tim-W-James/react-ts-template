@@ -21,8 +21,8 @@
   },
   "type": "module",
   "engines": {
-    "node": "^18.2.0",
-    "pnpm": "^7.2.1"
+    "node": ">=16.13.2",
+    "pnpm": ">=7.2.1"
   },
   "packageManager": "pnpm@7.2.1",
   "main": "src/main.ts",
