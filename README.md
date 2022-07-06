@@ -51,20 +51,20 @@ Complete the configuration checklist below and remove from the README once compl
   - [ ] Fill out each section of the README as needed, uncommenting/removing sections as needed.
   - [ ] Add images for the following:
         images/logo.png, images/screenshot.png
-      <!-- ! Use ESM, this is only included for reference
-           ! If you need to use CJS, see: https://www.typescriptlang.org/docs/handbook/esm-node.html -->
-    <!-- - [ ] Set the environment of the project:
-  - ES Modules (import, export):
-    - Add to `package.json`: `"type": "module"`
-    - Add to `tsconfig.json`:
-      - `"module": "ES6"`
-      - `"moduleResolution" : "node`
-      - `"lib": ["ES6", "DOM"]`
-    - Add to `.eslintrc.cjs`: `"parserOptions": { "sourceType": "module" }`
-  - Node CommonJS (require, exports):
-    - Add to `package.json`: `"type": "commonjs"`
-    - Add to `tsconfig.json`: `"module": "commonjs"`
-    - Add to `.eslintrc.cjs`: `"parserOptions": { "sourceType": "script" }` -->
+        <!-- ! Use ESM, this is only included for reference -->
+        <!-- ! If you need to use CJS, see: https://www.typescriptlang.org/docs/handbook/esm-node.html -->
+      <!-- - [ ] Set the environment of the project: -->
+    <!-- - ES Modules (import, export): -->
+      <!-- - Add to `package.json`: `"type": "module"` -->
+      <!-- - Add to `tsconfig.json`:
+        - `"module": "ES6"`
+        - `"moduleResolution" : "node`
+        - `"lib": ["ES6", "DOM"]` -->
+      <!-- - Add to `.eslintrc.cjs`: `"parserOptions": { "sourceType": "module" }` -->
+    <!-- - Node CommonJS (require, exports): -->
+      <!-- - Add to `package.json`: `"type": "commonjs"` -->
+      <!-- - Add to `tsconfig.json`: `"module": "commonjs"` -->
+      <!-- - Add to `.eslintrc.cjs`: `"parserOptions": { "sourceType": "script" }` -->
 - [ ] Set the target ES version (ES6 - supported by most browsers, ESNext - latest):
   - `./.eslint.cjs`:
     - `"<target>": true`
