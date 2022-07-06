@@ -19,7 +19,8 @@ starter app using Bootstrap Components and React Router 6.
 - [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in `./.prettierrc.cjs`
 - [Vitest](https://vitest.dev/config/): testing framework, configured in `./vite.config.ts` > test
 - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration): global imports. Configured in `./vite.config.ts` > Plugins > AutoImport
-- npm scripts (run with `npm run <script>`):
+- [pnpm](https://pnpm.io/): configuration for the `pnpm` package manager for better performance, lockfiles and monorepo support. See steps <a href="#todo">below</a> if you wish to use a different package manager.
+- `npm` scripts - run with `pnpm <script>` (or if you use a different package manager `yarn run <script>` or `npm run <script>`):
   - `dev` - starts a dev environment on localhost that will reload as files change
   - `dev:https` - starts a dev environment on localhost over https (requires a
     cert to be generated)
@@ -27,9 +28,9 @@ starter app using Bootstrap Components and React Router 6.
   - `preview` - after build, preview on localhost
   - `lint` - evaluate ESLint rules against source code
   - `format` - format source code with prettier and try to fix any ESLint errors
-  - `test:run` - run tests
+  - `test:run` - run tests located in `./tests`
   - `test:ui` - run tests and display on localhost
-  - `test` - run unit tests located in `./tests` that will reload whenever files change
+  - `test` - run unit tests located in `./tests` in watch mode
   - `coverage` - run coverage tests and output results to `./coverage`
 - [Husky](https://github.com/typicode/husky): pre-commit Git hooks to lint, format and run tests. Configured in `./.husky`
 - [GitHub Actions](https://docs.github.com/en/actions): CI/CD pipeline. Configured in `./.github/workflows`
@@ -45,12 +46,12 @@ Complete the configuration checklist below and remove from the README once compl
       repo_name, project_title, project_description, project_keywords
 - [ ] Replace personal information with your own:
       Tim-W-James, Tim James, tim.jameswork9800@gmail.com, https://linkedin.com/in/timothy-william-james/
-- [ ] Specify the LICENSE.txt for the project
+- [ ] Specify the LICENSE.txt for the project and set `./package.json` > `license`
 - [ ] `README.md` - there is a README template [below](#top) based on the [Best-README-Template](https://github.com/othneildrew/Best-README-Template). Find a list of resources to help you write READMEs in a comment at the end of this file. Fill out the following:
   - [ ] Fill out each section of the README as needed, uncommenting/removing sections as needed.
   - [ ] Add images for the following:
       images/logo.png, images/screenshot.png
-  <!-- ! Use ESM where possible
+  <!-- ! Use ESM, this is only included for reference
        ! If you need to use CJS, see: https://www.typescriptlang.org/docs/handbook/esm-node.html
 - [ ] Set the environment of the project:
   - ES Modules (import, export):
@@ -72,14 +73,27 @@ Complete the configuration checklist below and remove from the README once compl
     - `"target": "<target>"`
     - `"module": "<target>"`
     - `"lib": ["<target>", "DOM"]`
-  - Append `--target <target>` to the `package.json` build script
-- [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `vite.config.ts` > Plugins > AutoImport
-- [ ] Do you want to commit package-lock? If not, add it to the `./.gitignore` and change the GitHub Action step "install dependencies" from `npm ci` to `npm i`. Also consider using [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable)
-- [ ] Specify node version in the `.nvmrc`
+  - Append `--target <target>` to the `./package.json` build script
 - [ ] Specify formatting and editor configuration in `./.editorconfig`. Use the `./.prettierrc.cjs` for js specific rules that are not defined in `./.editorconfig`.
-- [ ] Run: `npm ci` (or `yarn` if using [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable))
-- [ ] Setup Git hooks (Husky): `npm run prepare`
-- [ ] Add continuous deployment workflow to `./.github/workflows`
+- [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `./vite.config.ts` > Plugins > AutoImport
+- [ ] Specify node version in the `./.nvmrc` and `./package.json` > `engines` > `node`
+- [ ] This repo is configured for the `pnpm` package manager. If you wish to change this to [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable) or `npm`, configure the following:
+  - Modify `./package.json` > `engines` and `packageManager` to refer to the version of the package manager you are using
+  - Modify the GitHub actions in `./.github/workflows` to install your package manager (if using something other than `npm`), use it in pipeline steps, and cache
+  - Modify any scripts that call `pnpm` in `./package.json` > `scripts`
+  - Modify any Git hooks that call `pnpm` in `./.husky/pre-commit`
+  - Update the README instructions accordingly
+  - Remove the old lockfile and regenerate it if needed:
+    - `pnpm`: `pnpm i --lockfile-only`
+    - `yarn`: `yarn install --mode update-lockfile`
+    - `npm`: `npm install --package-lock-only`
+  - NOT RECOMMENDED: If you don't want to commit your lockfile, add it to the `./.gitignore` and change the GitHub Action step "Install Dependencies" (for `npm`, change `npm ci` to `npm i`).
+- [ ] Install dependencies with your package manager of choice:
+  - `pnpm`: `pnpm i`
+  - `yarn`: `yarn install`
+  - `npm`: `npm ci` (lockfile) or `npm i` (no lockfile)
+- [ ] Install Git hooks if needed (this should happen automatically when dependencies are installed): `husky install`
+- [ ] Add continuous deployment workflow to `./.github/workflows` as needed
 - [ ] Finally, remove/modify the sample code:
   - `./src/*`
   - `./tests/*`
@@ -211,19 +225,25 @@ See the [open issues](https://github.com/Tim-W-James/repo_name/issues) for a lis
   nvm install && nvm use
   ```
 
+- Install the [`pnpm`](https://pnpm.io/installation) package manager. Use [`corepack`](https://nodejs.org/api/corepack.html) for automatic installation, which is an experimental `node` feature that must be enabled using:
+
+  ```sh
+  corepack enable
+  ```
+
 ### Installation
 
-1. Clone the repo
+- Clone the repo
 
-```sh
-git clone https://github.com/Tim-W-James/repo_name.git
-```
+  ```sh
+  git clone https://github.com/Tim-W-James/repo_name.git
+  ```
 
-2. Install dependencies
+- Install dependencies with [`pnpm`](https://pnpm.io/installation)
 
-```sh
-npm i
-```
+  ```sh
+  pnpm i
+  ```
 
 <!-- USAGE -->
 
@@ -232,8 +252,8 @@ npm i
 - Build to `./dist` and preview:
 
   ```sh
-  npm run build
-  npm run preview
+  pnpm build
+  pnpm preview
   ```
 
 <!-- ### Example Usecases
@@ -249,7 +269,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 - Start a development environment:
 
   ```sh
-  npm run dev
+  pnpm dev
   ```
 
 ### Project Structure
@@ -267,13 +287,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 - Run unit tests located in `./tests` that will reload whenever files change:
 
   ```sh
-  npm run test
+  pnpm test
   ```
 
 - Run coverage tests and output results to `./coverage`:
 
   ```sh
-  npm run coverage
+  pnpm coverage
   ```
 
 ### Code Style
@@ -281,14 +301,14 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 - Evaluate ESLint (`./.eslintrc.cjs`) and StyleLint (`./.stylelintrc.cjs`) rules against source code:
 
   ```sh
-  npm run lint
+  pnpm lint
   ```
 
 - Format source code with prettier (`./.prettierrc.cjs`) and try to fix any
   ESLint (`./.eslintrc.cjs`) or StyleLint (`./.stylelintrc.cjs`) errors:
 
   ```sh
-  npm run format
+  pnpm format
   ```
 
 <!-- CONTRIBUTING -->

@@ -47,7 +47,7 @@
 
     // Emit
     "noEmit": true, // Disable emitting files from a compilation.
-    // ! If you want to emit d.ts declaration files, uncomment the next 4 lines and set "noEmit" to "false"
+    // ! If you want to emit d.ts declaration files, uncomment the lines below and set "noEmit" to "false"
     // "emitDeclarationOnly": true, // Only output d.ts files and not JavaScript files.
     // "declaration": true, // Generate .d.ts files from TypeScript and JavaScript files in your project.
     // "declarationMap": true, // Create sourcemaps for d.ts files.

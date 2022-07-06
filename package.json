@@ -2,8 +2,12 @@
   "name": "repo_name",
   "version": "0.0.0",
   "description": "project_description :rocket:",
-  "author": "Tim James",
-  "license": "SEE LICENSE IN LICENSE.txt",
+  "author": {
+    "name": "Tim James",
+    "email": "tim.jameswork9800@gmail.com",
+    "url": "https://timjames.dev"
+  },
+  "license": "MIT",
   "homepage": "https://github.com/Tim-W-James/repo_name#readme",
   "repository": {
     "type": "git",
@@ -16,18 +20,24 @@
     "url": "https://github.com/Tim-W-James/repo_name/issues"
   },
   "type": "module",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7"
+  },
+  "packageManager": "pnpm@7.2.1",
   "main": "src/main.ts",
+  "private": "true",
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
     "dev:open": "vite --open",
     "dev:https": "vite --https",
-    "start": "npm run dev",
+    "start": "pnpm dev",
     "build": "tsc && vite build",
     "preview": "vite preview --host",
     "lint": "eslint src && stylelint './src/**/*.{css,scss}'",
     "format": "eslint src --fix && eslint tests --fix && stylelint './src/**/*.{css,scss}' --fix",
-    "format:all": "npm run format && prettier --write './**/*.{json,yaml,yml,ts,js,cjs,md}'",
+    "format:all": "pnpm format && prettier --write './**/*.{json,yaml,yml,ts,js,cjs,md}'",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
