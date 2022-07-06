@@ -78,7 +78,7 @@ Complete the configuration checklist below and remove from the README once compl
 - [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `./vite.config.ts` > Plugins > AutoImport
 - [ ] Specify node version in the `./.nvmrc` and `./package.json` > `engines` > `node`
 - [ ] This repo is configured for the `pnpm` package manager. If you wish to change this to [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable) or `npm`, configure the following:
-  - Modify `./package.json` > `engines`, `./package.json` > `packageManager` and `./renovate.json` > `compatibility` to refer to the version of the package manager you are using
+  - Modify `./package.json` > `engines` and `./package.json` > `packageManager` to refer to the version of the package manager you are using
   - Modify the GitHub actions in `./.github/workflows` to install your package manager (if using something other than `npm`), use it in pipeline steps, and cache
   - Modify any scripts that call `pnpm` in `./package.json` > `scripts`
   - Modify any Git hooks that call `pnpm` in `./.husky/pre-commit`
