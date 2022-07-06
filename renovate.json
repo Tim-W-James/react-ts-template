@@ -3,7 +3,6 @@
   "labels": ["dependencies"],
   "timezone": "Australia/Sydney",
   "schedule": "before 5am on Saturday",
-  "compatibility": { "pnpm": "^7.2.1" },
   "lockFileMaintenance": { "enabled": true },
   "transitiveRemediation": true,
   "packageRules": [
