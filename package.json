@@ -36,7 +36,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview --host",
     "lint": "eslint src && stylelint './src/**/*.{css,scss}'",
-    "format": "eslint src --fix && eslint tests --fix && stylelint './src/**/*.{css,scss}' --fix",
+    "format": "eslint src --fix && stylelint './src/**/*.{css,scss}' --fix",
     "format:all": "pnpm format && prettier --write './**/*.{json,yaml,yml,ts,js,cjs,md}'",
     "test": "vitest",
     "test:ui": "vitest --ui",
@@ -45,10 +45,6 @@
   },
   "lint-staged": {
     "./src/**/*.tsx": [
-      "eslint --fix",
-      "eslint"
-    ],
-    "./tests/**/*.tsx": [
       "eslint --fix",
       "eslint"
     ],

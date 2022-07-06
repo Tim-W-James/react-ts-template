@@ -21,16 +21,15 @@ starter app using Bootstrap Components and React Router 6.
 - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration): global imports. Configured in `./vite.config.ts` > Plugins > AutoImport
 - [pnpm](https://pnpm.io/): configuration for the `pnpm` package manager for better performance, lockfiles and monorepo support. See steps <a href="#todo">below</a> if you wish to use a different package manager.
 - `npm` scripts - run with `pnpm <script>` (or if you use a different package manager `yarn run <script>` or `npm run <script>`):
-  - `dev` - starts a dev environment on localhost that will reload as files change
-  - `dev:https` - starts a dev environment on localhost over https (requires a
-    cert to be generated)
-  - `build` - compile prod source code to `./dist`
+  - `dev` - starts a dev environment on localhost with Hot Module Reloading (automatically updates when source code changes)
+  - `dev:https` - starts a dev environment on localhost over https (requires [local development certificates to be generated](https://github.com/FiloSottile/mkcert))
+  - `build` - compile production source code to `./dist`
   - `preview` - after build, preview on localhost
   - `lint` - evaluate ESLint rules against source code
   - `format` - format source code with prettier and try to fix any ESLint errors
-  - `test:run` - run tests located in `./tests`
-  - `test:ui` - run tests and display on localhost
-  - `test` - run unit tests located in `./tests` in watch mode
+  - `test:run` - run tests using [`Vitest`](https://vitest.dev/config/)
+  - `test:ui` - run tests and display a UI on localhost
+  - `test` - run unit tests in watch mode (automatically reruns tests when source code changes)
   - `coverage` - run coverage tests and output results to `./coverage`
 - [Husky](https://github.com/typicode/husky): pre-commit Git hooks to lint, format and run tests. Configured in `./.husky`
 - [GitHub Actions](https://docs.github.com/en/actions): CI/CD pipeline. Configured in `./.github/workflows`
@@ -50,10 +49,10 @@ Complete the configuration checklist below and remove from the README once compl
 - [ ] `README.md` - there is a README template [below](#top) based on the [Best-README-Template](https://github.com/othneildrew/Best-README-Template). Find a list of resources to help you write READMEs in a comment at the end of this file. Fill out the following:
   - [ ] Fill out each section of the README as needed, uncommenting/removing sections as needed.
   - [ ] Add images for the following:
-      images/logo.png, images/screenshot.png
-  <!-- ! Use ESM, this is only included for reference
-       ! If you need to use CJS, see: https://www.typescriptlang.org/docs/handbook/esm-node.html
-- [ ] Set the environment of the project:
+        images/logo.png, images/screenshot.png
+      <!-- ! Use ESM, this is only included for reference
+           ! If you need to use CJS, see: https://www.typescriptlang.org/docs/handbook/esm-node.html -->
+    <!-- - [ ] Set the environment of the project:
   - ES Modules (import, export):
     - Add to `package.json`: `"type": "module"`
     - Add to `tsconfig.json`:
@@ -96,7 +95,6 @@ Complete the configuration checklist below and remove from the README once compl
 - [ ] Add continuous deployment workflow to `./.github/workflows` as needed
 - [ ] Finally, remove/modify the sample code:
   - `./src/*`
-  - `./tests/*`
   - `./public/assets/*`
   - `./index.html`
   - And any dependencies you don't need such as `react-router-dom`,
@@ -275,7 +273,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 ### Project Structure
 
 - Source code: `./src`
-- Tests: `./tests`
 - Types: `./types`
 - SCSS: `./src/scss`
 - Web accessible files: `./public`
@@ -284,7 +281,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 ### Testing
 
-- Run unit tests located in `./tests` that will reload whenever files change:
+- Run unit tests in watch mode (automatically reruns tests when source code changes):
 
   ```sh
   pnpm test

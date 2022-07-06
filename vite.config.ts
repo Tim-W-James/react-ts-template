@@ -50,7 +50,7 @@ export default defineConfig({
   },
   // https://github.com/vitest-dev/vitest
   test: {
-    include: ["tests/**/*.test.ts", "tests/**/*.test.tsx"],
+    include: ["src/**/*.test.{ts,tsx}"],
     environment: "happy-dom",
     globals: true,
     coverage: {
