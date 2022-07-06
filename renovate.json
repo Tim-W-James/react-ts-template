@@ -1,0 +1,20 @@
+{
+  "extends": ["config:base", ":preserveSemverRanges"],
+  "labels": ["dependencies"],
+  "timezone": "Australia/Sydney",
+  "schedule": "before 5am on Saturday",
+  "compatibility": { "pnpm": "^7.2.1" },
+  "lockFileMaintenance": { "enabled": true },
+  "transitiveRemediation": true,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
+    },
+    {
+      "matchDatasources": ["npm"],
+      "stabilityDays": 3
+    }
+  ]
+}
