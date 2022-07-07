@@ -16,7 +16,7 @@ starter app using Bootstrap Components and React Router 6.
 - [Stylelint](https://stylelint.io/): Linter/code analyzer for SCSS. Configured in `./.stylelintrc.cjs`
 - [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in `./.prettierrc.cjs`
 - [Vitest](https://vitest.dev/config/): unit testing framework. Configured in `./vite.config.ts` > `test`
-- [Storybook](https://storybook.js.org/): preview, document and test individual components. Configured in `./.storybook/main.cjs`
+- [Storybook](https://storybook.js.org/): view, document and test individual components and pages. Configured in `./.storybook/main.cjs`
 - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration): global imports. Configured in `./vite.config.ts` > `Plugins` > `AutoImport`
 - [pnpm](https://pnpm.io/): configuration for the `pnpm` package manager for better performance, lockfiles and monorepo support. See steps <a href="#todo">below</a> if you wish to use a different package manager.
 - `npm` scripts - run with `pnpm <script>` (or if you use a different package manager `yarn run <script>` or `npm run <script>`):
@@ -30,6 +30,7 @@ starter app using Bootstrap Components and React Router 6.
   - `test:ui` - run tests and display a UI on localhost
   - `test` - run unit tests in watch mode (automatically reruns tests when source code changes)
   - `coverage` - run coverage tests and output results to `./coverage`
+  - `storybook` - launch Storybook to view, document and test components and pages
 - [Husky](https://github.com/typicode/husky): pre-commit Git hooks to lint, format and run tests. Configured in `./.husky`
 - [GitHub Actions](https://docs.github.com/en/actions): GitHub CI/CD pipeline. Configured in `./.github/workflows`
 - Starter React app with [Bootstrap 5](https://react-bootstrap.github.io/getting-started/introduction/) and [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)
@@ -288,7 +289,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 ### Testing
 
-- View and test individual components:
+- View and test individual components or pages:
 
   ```sh
   pnpm storybook
