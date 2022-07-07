@@ -114,17 +114,6 @@ Complete the configuration checklist below and remove from the README once compl
 *** Find a list of resources for writing markdown, etc. at the end of this file.
 -->
 
-<!-- PROJECT SHIELDS -->
-<!-- [![CI][ci-shield]][ci-url] -->
-<!-- [![Release][release-shield]][release-url] -->
-<!-- [![Last Commit][last-commit-shield]][last-commit-url] -->
-<!-- [![Contributors][contributors-shield]][contributors-url] -->
-<!-- [![Forks][forks-shield]][forks-url] -->
-<!-- [![Stargazers][stars-shield]][stars-url] -->
-<!-- [![Issues][issues-shield]][issues-url] -->
-<!-- [![MIT License][license-shield]][license-url] -->
-<!-- [![LinkedIn][linkedin-shield]][linkedin-url] -->
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -147,6 +136,35 @@ Complete the configuration checklist below and remove from the README once compl
     <a href="https://github.com/Tim-W-James/repo_name/issues">Request Feature</a> -->
   </p>
 </p>
+
+<!-- PROJECT SHIELDS -->
+<!-- Shields: https://shields.io -->
+<!-- Icons: https://github.com/simple-icons/simple-icons/blob/develop/slugs.md -->
+
+<br/>
+<p align="center">
+  <!-- GitHub Actions Shield -->
+  <a href="https://github.com/Tim-W-James/repo_name/actions"><img src="https://img.shields.io/github/workflow/status/Tim-W-James/repo_name/CI?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI"></a>
+  <!-- Last Commit Shield -->
+  <a href="https://github.com/Tim-W-James/repo_name/commits/main"><img src="https://img.shields.io/github/last-commit/Tim-W-James/repo_name.svg?style=for-the-badge&logo=git&logoColor=white" alt="Release"></a>
+  <!-- Renovate Shield -->
+  <a href="https://github.com/Tim-W-James/repo_name/issues/2"><img src="https://img.shields.io/badge/-Renovate-black.svg?style=for-the-badge&logo=renovatebot&colorB=555" alt="Renovate"></a>
+  <!-- Release Shield -->
+  <!-- <a href="https://github.com/Tim-W-James/repo_name/releases"><img src="https://img.shields.io/github/v/release/Tim-W-James/repo_name.svg?include_prereleases&style=for-the-badge" alt="Release"></a> -->
+  <!-- Contributors Shield -->
+  <!-- <a href="https://github.com/Tim-W-James/repo_name/graphs/contributors"><img src="https://img.shields.io/github/contributors/Tim-W-James/repo_name.svg?style=for-the-badge&logo=github&logoColor=white" alt="Contributors"></a> -->
+  <!-- Forks Shield -->
+  <!-- <a href="https://github.com/Tim-W-James/repo_name/network/members"><img src="https://img.shields.io/github/forks/Tim-W-James/repo_name.svg?style=for-the-badge" alt="Forks"></a> -->
+  <!-- Stars Shield -->
+  <!-- <a href="https://github.com/Tim-W-James/repo_name/stargazers"><img src="https://img.shields.io/github/stars/Tim-W-James/repo_name.svg?style=for-the-badge" alt="Stars"></a> -->
+  <!-- Issues Shield -->
+  <!-- <a href="https://github.com/Tim-W-James/repo_name/issues"><img src="https://img.shields.io/github/issues/Tim-W-James/repo_name.svg?style=for-the-badge" alt="Issues"></a> -->
+  <!-- License Shield -->
+  <!-- <a href="https://github.com/Tim-W-James/repo_name/blob/main/LICENSE.txt"><img src="https://img.shields.io/github/license/Tim-W-James/repo_name.svg?style=for-the-badge" alt="License"></a> -->
+  <!-- Linkedin Shield -->
+  <!-- <a href="https://linkedin.com/in/timothy-william-james/"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="Linkedin"></a> -->
+</p>
+<br/>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -356,29 +374,9 @@ Project Link: [https://github.com/Tim-W-James/repo_name](https://github.com/Tim-
 
 <a href="#top">↑ Back to Top ↑</a>
 
-<!-- MARKDOWN LINKS & IMAGES -->
+<!-- MARKDOWN IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-<!-- Shields: https://shields.io -->
-<!-- Icons: https://github.com/simple-icons/simple-icons/blob/develop/slugs.md -->
 
-[ci-shield]: https://img.shields.io/github/workflow/status/Tim-W-James/repo_name/CI?style=for-the-badge&logo=githubactions&logoColor=white
-[ci-url]: https://github.com/Tim-W-James/repo_name/actions
-[release-shield]: https://img.shields.io/github/v/release/Tim-W-James/repo_name.svg?include_prereleases&style=for-the-badge
-[release-url]: https://github.com/Tim-W-James/repo_name/releases
-[last-commit-shield]: https://img.shields.io/github/last-commit/Tim-W-James/repo_name.svg?style=for-the-badge&logo=git&logoColor=white
-[last-commit-url]: https://github.com/Tim-W-James/repo_name/commits/main
-[contributors-shield]: https://img.shields.io/github/contributors/Tim-W-James/repo_name.svg?style=for-the-badge&logo=github&logoColor=white
-[contributors-url]: https://github.com/Tim-W-James/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Tim-W-James/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/Tim-W-James/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/Tim-W-James/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/Tim-W-James/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Tim-W-James/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/Tim-W-James/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/Tim-W-James/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/Tim-W-James/repo_name/blob/main/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/timothy-william-james/
 [product-screenshot]: images/screenshot.png
 
 <!-- USEFUL LINKS FOR MARKDOWN
