@@ -12,6 +12,10 @@
       "automerge": true
     },
     {
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
+    },
+    {
       "matchDatasources": ["npm"],
       "stabilityDays": 3
     }
