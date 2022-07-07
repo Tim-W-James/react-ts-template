@@ -1,4 +1,4 @@
-import logo from "@assets/logo.svg";
+import logo from "@assets/svg/logo.svg";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 

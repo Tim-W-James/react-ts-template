@@ -1,11 +1,11 @@
 import ExampleForm from "@pages/ExampleForm";
 import Home from "@pages/Home";
 import NotFound from "@pages/NotFound";
-import "@scss/index.scss";
 import App from "App";
 import { StrictMode } from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./index.scss";
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 render(

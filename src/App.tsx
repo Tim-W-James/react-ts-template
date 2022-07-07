@@ -1,6 +1,6 @@
-import PrimaryFooter from "@components/PrimaryFooter";
-import PrimaryNavbar from "@components/PrimaryNavbar";
 import { User, UserContext } from "@context/UserContext";
+import PrimaryFooter from "@layout/PrimaryFooter";
+import PrimaryNavbar from "@layout/PrimaryNavbar";
 import { Container } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
 

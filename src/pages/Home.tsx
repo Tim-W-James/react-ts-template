@@ -1,6 +1,6 @@
-import logo from "@assets/logo.svg";
-import "@scss/Home.scss";
+import logo from "@assets/svg/logo.svg";
 import Button from "react-bootstrap/Button";
+import "./Home.scss";
 
 const Home: React.FC = () => {
   const [count, setCount] = useState<number>(0);
