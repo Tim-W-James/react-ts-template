@@ -1,14 +1,14 @@
+import ExampleForm from "@pages/ExampleForm";
+import Home from "@pages/Home";
+import NotFound from "@pages/NotFound";
+import "@scss/index.scss";
 import App from "App";
-import ExampleForm from "pages/ExampleForm";
-import Home from "pages/Home";
-import NotFound from "pages/NotFound";
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "scss/index.scss";
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-createRoot(document.getElementById("root")!).render(
+render(
   <StrictMode>
     <Router>
       <Routes>
@@ -24,5 +24,6 @@ createRoot(document.getElementById("root")!).render(
         </Route>
       </Routes>
     </Router>
-  </StrictMode>
+  </StrictMode>,
+  document.getElementById("root")
 );

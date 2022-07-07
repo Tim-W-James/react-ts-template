@@ -8,17 +8,16 @@ starter app using Bootstrap Components and React Router 6.
 
 ### Template includes:
 
-- [React 18](https://reactjs.org/docs/getting-started.html): frontend framework
+- [React 17](https://reactjs.org/docs/getting-started.html): frontend framework
 - [Vite](https://vitejs.dev/config/): frontend build tool and dev server, configured in `./vite.config.ts`
 - [TypeScript 4.7](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): types for js. Configured in `./tsconfig.json`
 - [SASS](https://sass-lang.com/): CSS preprocessor
-- [ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code
-  analyzer for TypeScript. Configured in `./.eslintrc.cjs` with
-  rules from AirBnB and SonarJS.
+- [ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code analyzer for TypeScript. Configured in `./.eslintrc.cjs` with rules from AirBnB and SonarJS
 - [Stylelint](https://stylelint.io/): Linter/code analyzer for SCSS. Configured in `./.stylelintrc.cjs`
 - [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in `./.prettierrc.cjs`
-- [Vitest](https://vitest.dev/config/): testing framework, configured in `./vite.config.ts` > test
-- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration): global imports. Configured in `./vite.config.ts` > Plugins > AutoImport
+- [Vitest](https://vitest.dev/config/): unit testing framework. Configured in `./vite.config.ts` > `test`
+- [Storybook](https://storybook.js.org/): preview, document and test individual components. Configured in `./.storybook/main.cjs`
+- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration): global imports. Configured in `./vite.config.ts` > `Plugins` > `AutoImport`
 - [pnpm](https://pnpm.io/): configuration for the `pnpm` package manager for better performance, lockfiles and monorepo support. See steps <a href="#todo">below</a> if you wish to use a different package manager.
 - `npm` scripts - run with `pnpm <script>` (or if you use a different package manager `yarn run <script>` or `npm run <script>`):
   - `dev` - starts a dev environment on localhost with Hot Module Reloading (automatically updates when source code changes)
@@ -32,7 +31,7 @@ starter app using Bootstrap Components and React Router 6.
   - `test` - run unit tests in watch mode (automatically reruns tests when source code changes)
   - `coverage` - run coverage tests and output results to `./coverage`
 - [Husky](https://github.com/typicode/husky): pre-commit Git hooks to lint, format and run tests. Configured in `./.husky`
-- [GitHub Actions](https://docs.github.com/en/actions): CI/CD pipeline. Configured in `./.github/workflows`
+- [GitHub Actions](https://docs.github.com/en/actions): GitHub CI/CD pipeline. Configured in `./.github/workflows`
 - Starter React app with [Bootstrap 5](https://react-bootstrap.github.io/getting-started/introduction/) and [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)
 - [Renovate](https://github.com/marketplace/renovate): GitHub bot for automatic dependency updates. Configured in `./renovate.json`
 - See the <a href="#project-structure">Project Structure</a>
@@ -45,7 +44,7 @@ Complete the configuration checklist below and remove from the README once compl
 - [ ] Specify the following fields with a search and replace:
       repo_name, project_title, project_description, project_keywords
 - [ ] Replace personal information with your own:
-      Tim-W-James, Tim James, tim.jameswork9800@gmail.com, https://linkedin.com/in/timothy-william-james/
+      Tim-W-James, Tim James, tim.jameswork9800@gmail.com, https://linkedin.com/in/timothy-william-james/, https://timjames.dev
 - [ ] Specify the LICENSE.txt for the project and set `./package.json` > `license`
 - [ ] `README.md` - there is a README template [below](#top) based on the [Best-README-Template](https://github.com/othneildrew/Best-README-Template). Find a list of resources to help you write READMEs in a comment at the end of this file. Fill out the following:
   - [ ] Fill out each section of the README as needed, uncommenting/removing sections as needed.
@@ -73,9 +72,9 @@ Complete the configuration checklist below and remove from the README once compl
     - `"target": "<target>"`
     - `"module": "<target>"`
     - `"lib": ["<target>", "DOM"]`
-  - Append `--target <target>` to the `./package.json` build script
-- [ ] Specify formatting and editor configuration in `./.editorconfig`. Use the `./.prettierrc.cjs` for js specific rules that are not defined in `./.editorconfig`.
-- [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `./vite.config.ts` > Plugins > AutoImport
+  - Append `--target <target>` to the `build` script in `./package.json` or specify the target in `./vite.config.ts` > `build` > `target`
+- [ ] Specify formatting and editor configuration in `./.editorconfig`. Use the `./.prettierrc.cjs` for js specific rules that are not defined in `./.editorconfig`
+- [ ] Add any [global imports](https://github.com/antfu/unplugin-auto-import#configuration) to `./vite.config.ts` > `Plugins` > `AutoImport`. You may also need to update the Vite configuration used in `./.storybook/main.cjs`
 - [ ] Specify node version in the `./.nvmrc` and `./package.json` > `engines` > `node`
 - [ ] This repo is configured for the `pnpm` package manager. If you wish to change this to [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable) or `npm`, configure the following:
   - Modify `./package.json` > `engines` and `./package.json` > `packageManager` to refer to the version of the package manager you are using
@@ -90,17 +89,17 @@ Complete the configuration checklist below and remove from the README once compl
   - NOT RECOMMENDED: If you don't want to commit your lockfile, add it to the `./.gitignore` and change the GitHub Action step "Install Dependencies" (for `npm`, change `npm ci` to `npm i`).
 - [ ] Install dependencies with your package manager of choice:
   - `pnpm`: `pnpm i`
-  - `yarn`: `yarn install`
+  - `yarn`: `yarn`
   - `npm`: `npm ci` (lockfile) or `npm i` (no lockfile)
 - [ ] Install Git hooks if needed (this should happen automatically when dependencies are installed): `husky install`
 - [ ] Add continuous deployment workflow to `./.github/workflows` as needed
 - [ ] Install the [Renovate](https://github.com/marketplace/renovate) bot on GitHub for automatic dependency updates
 - [ ] Finally, remove/modify the sample code:
-  - `./src/*`
+  - `./src/example-component.tsx` and `./src/example-component.test.tsx` (example for using Vitest and snapshots)
+  - `./src/stories` (example Storybook)
   - `./public/assets/*`
-  - `./index.html`
-  - And any dependencies you don't need such as `react-router-dom`,
-    `react-bootstrap` or `react-icons`
+  - Anything else you don't need in `./src/*`
+  - And any dependencies you don't need such as `react-bootstrap` or `react-icons`
 
 ↑ Remove everything above once setup is complete. ↑
 
@@ -233,13 +232,13 @@ See the [open issues](https://github.com/Tim-W-James/repo_name/issues) for a lis
 
 ### Installation
 
-- Clone the repo
+- Clone the repo:
 
   ```sh
   git clone https://github.com/Tim-W-James/repo_name.git
   ```
 
-- Install dependencies with [`pnpm`](https://pnpm.io/installation)
+- Install dependencies with [`pnpm`](https://pnpm.io/installation):
 
   ```sh
   pnpm i
@@ -266,6 +265,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 ## Development
 
+- Ensure you have Git Hooks enabled (should run automatically after `pnpm i`):
+
+  ```sh
+  npx husky install
+  ```
+
 - Start a development environment:
 
   ```sh
@@ -274,14 +279,22 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 ### Project Structure
 
-- Source code: `./src`
-- Types: `./types`
-- SCSS: `./src/scss`
-- Web accessible files: `./public`
-- Site assets (images, etc.): `./public/assets`
+- Source code (place Vitest `tests` and Storybook `stories` adjacent to source code - I recommend using [VSCode file nesting](https://code.visualstudio.com/updates/v1_64#_explorer-file-nesting) for a [cleaner file tree](https://github.com/antfu/vscode-file-nesting-config)): `./src`
+- Global TypeScript types: `./types`
+- SCSS styling (use `index.scss` for globals): `./src/scss`
+- Web accessible files (`robots.txt`, `manifest.json`, etc.): `./public`
+- Site assets (`favicon.svg`, images, etc.): `./public/assets`
 - README images: `./images`
 
 ### Testing
+
+- View and test individual components:
+
+  ```sh
+  pnpm storybook
+  ```
+
+  Note: initially, you may need to run this script twice to fix a caching error
 
 - Run unit tests in watch mode (automatically reruns tests when source code changes):
 

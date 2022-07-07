@@ -127,3 +127,6 @@ dist-ssr
 
 # Other output
 out
+
+# Storybook output
+storybook-static

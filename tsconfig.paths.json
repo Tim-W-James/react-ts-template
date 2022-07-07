@@ -6,6 +6,7 @@
       // ! Define paths relative to the ./public directory in ./vite.config.ts
       "@scss/*": ["scss/*"],
       "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
       "@context/*": ["context/*"]
     }
   }
