@@ -195,9 +195,10 @@ Complete the configuration checklist below and remove from the README once compl
     <li>
         <a href="#development">Development</a>
         <ul>
-          <li><a href="#project-structure">Project Structure</a></li>
           <li><a href="#testing">Testing</a></li>
           <li><a href="#code-style">Code Style</a></li>
+          <li><a href="#project-structure">Project Structure</a></li>
+          <li><a href="#documentation">Documentation</a></li>
         </ul>
     </li>
     <!-- <li><a href="#contributing">Contributing</a></li> -->
@@ -296,35 +297,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
   pnpm dev
   ```
 
-### Project Structure
-
-- **Source Code**: [`./src`](./src)
-  - Entry point and routes: [`./src/index.tsx`](./src/index.tsx)
-  - Root component: [`./src/App.tsx`](./src/App.tsx)
-  - Common components: [`./src/components`](./src/components). Has alias `@components`. Group by type for `layout`, `buttons`, `forms`, etc.
-  - Common utils: [`./src/utils`](./src/utils). Has alias `@utils`
-  - Pages: [`./src/pages`](./src/pages). Has alias `@pages`. Nest subfolders for `components`, `utils`, `hooks`, etc. depending on the scope they apply to
-  - React context: [`./src/context`](./src/context). Has alias `@context`
-- **Unit Tests**: place `tests` adjacent to source code
-- **Storybook Stories**: place `stories` adjacent to source code
-- **SCSS Styling**:
-  - Use [`index.scss`](./src/index.scss) for globals
-  - Place page or component specific styles adjacent to source code
-- **Global TypeScript Types**: [`./types`](./types)
-- **Web Accessible Files** (`robots.txt`, `manifest.json`, etc.): [`./public`](./public)
-- **Site Assets** (`favicon.svg`, images, etc.): [`./public/assets`](./public/assets). Has alias `@assets`
-
-(I recommend using [VSCode file nesting](https://code.visualstudio.com/updates/v1_64#_explorer-file-nesting) for a [cleaner file tree](https://github.com/antfu/vscode-file-nesting-config)).
-
 ### Testing
-
-- View and test individual components or pages:
-
-  ```sh
-  pnpm storybook
-  ```
-
-  Note: initially, you may need to run this script twice to fix a caching error
 
 - Run unit tests in watch mode (automatically reruns tests when source code changes):
 
@@ -338,6 +311,14 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
   pnpm coverage
   ```
 
+- View and test individual components or pages:
+
+  ```sh
+  pnpm storybook
+  ```
+
+  Note: initially, you may need to run this script twice to fix a caching error
+
 ### Code Style
 
 - Evaluate ESLint ([`./.eslintrc.cjs`](./.eslintrc.cjs)) and StyleLint ([`./.stylelintrc.cjs`](./.stylelintrc.cjs)) rules against source code:
@@ -346,11 +327,42 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
   pnpm lint
   ```
 
-- Format source code with prettier ([`./.prettierrc.cjs`](./.prettierrc.cjs)) and try to fix any
-  ESLint ([`./.eslintrc.cjs`](./.eslintrc.cjs)) or StyleLint ([`./.stylelintrc.cjs`](./.stylelintrc.cjs)) errors:
+- Format source code with prettier ([`./.prettierrc.cjs`](./.prettierrc.cjs)) and try to fix any ESLint ([`./.eslintrc.cjs`](./.eslintrc.cjs)) or StyleLint ([`./.stylelintrc.cjs`](./.stylelintrc.cjs)) errors:
 
   ```sh
   pnpm format
+  ```
+
+### Project Structure
+
+- **Source Code**: [`./src`](./src)
+  - Entry point and routes: [`./src/index.tsx`](./src/index.tsx)
+  - Root component: [`./src/App.tsx`](./src/App.tsx)
+  - Common components: [`./src/components`](./src/components). Has alias `@components`. Group by type for `layout`, `buttons`, `forms`, etc.
+  - Common hooks: [`./src/hooks`](./src/hooks). Has alias `@hooks`
+  - Common utils: [`./src/utils`](./src/utils). Has alias `@utils`
+  - Pages: [`./src/pages`](./src/pages). Has alias `@pages`. Nest subfolders for `components`, `utils`, `hooks`, etc. depending on the scope they apply to
+  - React context: [`./src/context`](./src/context). Has alias `@context`
+- **Unit Tests**: place `tests` adjacent to source code
+- **Storybook Stories**: place `stories` adjacent to source code
+- **SCSS Styling**:
+  - Use [`index.scss`](./src/index.scss) for globals
+  - Place page or component specific styles adjacent to source code
+- **Global TypeScript Types**: [`./types`](./types)
+- **Web Accessible Files** (`robots.txt`, `manifest.json`, etc.): [`./public`](./public)
+- **Site Assets** (`favicon.svg`, images, etc.): [`./public/assets`](./public/assets). Has alias `@assets`
+
+Define path alias in [`./tsconfig.paths.json`](./tsconfig.paths.json).
+
+I recommend using [VSCode file nesting](https://code.visualstudio.com/updates/v1_64#_explorer-file-nesting) for a [cleaner file tree](https://github.com/antfu/vscode-file-nesting-config).
+
+### Documentation
+
+- Document code with [JSDoc](https://jsdoc.app/about-getting-started.html)
+- Document components or pages with [Storybook](https://storybook.js.org/) and run with:
+
+  ```sh
+  pnpm storybook
   ```
 
 <!-- CONTRIBUTING -->

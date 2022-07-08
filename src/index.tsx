@@ -1,3 +1,4 @@
+import Page from "@components/layout/Page";
 import ExampleForm from "@pages/ExampleForm";
 import Home from "@pages/Home";
 import NotFound from "@pages/NotFound";
@@ -7,20 +8,33 @@ import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.scss";
 
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 render(
   <StrictMode>
     <Router>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
+          <Route index element={<Page content={<Home />} />} />
           <Route
             path="form"
-            element={<ExampleForm heading={"Example Form"} />}
+            element={
+              <Page
+                content={<ExampleForm heading={"Example Form"} />}
+                title="Example Form"
+              />
+            }
           />
-          <Route path="dropdown/1" element={<p>Dropdown 1</p>} />
-          <Route path="dropdown/2" element={<p>Dropdown 2</p>} />
-          <Route path="*" element={<NotFound />} />
+          <Route
+            path="dropdown/1"
+            element={<Page content={<h2>Dropdown 1</h2>} title="Dropdown 1" />}
+          />
+          <Route
+            path="dropdown/2"
+            element={<Page content={<h2>Dropdown 2</h2>} title="Dropdown 2" />}
+          />
+          <Route
+            path="*"
+            element={<Page content={<NotFound />} title="Not Found" />}
+          />
         </Route>
       </Routes>
     </Router>

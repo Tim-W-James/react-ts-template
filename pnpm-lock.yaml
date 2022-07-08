@@ -42,6 +42,7 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   eslint-plugin-import: ^2.26.0
   eslint-plugin-jsx-a11y: ^6.5.1
+  eslint-plugin-prefer-arrow-functions: ^3.1.4
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-react: ^7.30.0
   eslint-plugin-react-hooks: ^4.5.0
@@ -121,7 +122,7 @@ devDependencies:
   "@typescript-eslint/eslint-plugin": 5.30.5_6zdoc3rn4mpiddqwhppni2mnnm
   "@typescript-eslint/parser": 5.30.5_4x5o4skxv6sl53vpwefgt23khm
   "@vitejs/plugin-react": 1.3.2
-  "@vitest/ui": 0.17.0
+  "@vitest/ui": 0.17.1
   babel-loader: 8.2.5_fswvdo7jykdwhfxrdcvghfn6pa
   c8: 7.11.3
   debug: 4.3.4
@@ -131,6 +132,7 @@ devDependencies:
   eslint-config-prettier: 8.5.0_eslint@8.19.0
   eslint-plugin-import: 2.26.0_iom7pm3yknyiblqpw2vvqvxs5i
   eslint-plugin-jsx-a11y: 6.6.0_eslint@8.19.0
+  eslint-plugin-prefer-arrow-functions: 3.1.4_eslint@8.19.0
   eslint-plugin-prettier: 4.2.1_7uxdfn2xinezdgvmbammh6ev5i
   eslint-plugin-react: 7.30.1_eslint@8.19.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.19.0
@@ -158,7 +160,7 @@ devDependencies:
   vite: 2.9.13_sass@1.53.0
   vite-plugin-eslint: 1.6.1_eslint@8.19.0+vite@2.9.13
   vite-tsconfig-paths: 3.5.0_vite@2.9.13
-  vitest: 0.17.0_cdtdrpbinzephu7a7pfma7ouay
+  vitest: 0.17.1_zlqyzx7ftk546j5lr4krmdk7hm
 
 packages:
   /@ampproject/remapping/2.2.0:
@@ -4779,10 +4781,10 @@ packages:
       - supports-color
     dev: true
 
-  /@vitest/ui/0.17.0:
+  /@vitest/ui/0.17.1:
     resolution:
       {
-        integrity: sha512-R8Lhx865qG288eWuzzZQ1PSUmiU4kiU1/rvQ9K2o0jSREbAqN9oss37dDdbCHr2Y4WRmZ/u9BuuwrppbjVfuiA==,
+        integrity: sha512-B4PGDk5IZ10HT9GzR0NQ96VEphWY9dTf1yqBGNjPk2c7wQnhZJdHzv3tgFQiyFK5YR1cjtOV918QHCnptV4r5w==,
       }
     dependencies:
       sirv: 2.0.2
@@ -6367,7 +6369,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001363
-      electron-to-chromium: 1.4.182
+      electron-to-chromium: 1.4.184
       node-releases: 2.0.5
       update-browserslist-db: 1.0.4_browserslist@4.21.1
     dev: true
@@ -6466,7 +6468,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.2
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -8008,10 +8010,10 @@ packages:
       }
     dev: true
 
-  /electron-to-chromium/1.4.182:
+  /electron-to-chromium/1.4.184:
     resolution:
       {
-        integrity: sha512-OpEjTADzGoXABjqobGhpy0D2YsTncAax7IkER68ycc4adaq0dqEG9//9aenKPy7BGA90bqQdLac0dPp6uMkcSg==,
+        integrity: sha512-IADi390FRdvxWfVX3hjzfTDNVHiTqVo9ar53/7em/SfhUG9YcjVhyQecY/XwmBHRKden/wFud7RWOUH7+7LFng==,
       }
     dev: true
 
@@ -8758,6 +8760,17 @@ packages:
       language-tags: 1.0.5
       minimatch: 3.1.2
       semver: 6.3.0
+    dev: true
+
+  /eslint-plugin-prefer-arrow-functions/3.1.4_eslint@8.19.0:
+    resolution:
+      {
+        integrity: sha512-LSO8VibqBKqzelr+L21mEIfachavCon+1SEumCJ6U8Ze2q0pntyojmomcVwd9RZBjrP+HV6k1Osz0B3Xwdq8WA==,
+      }
+    peerDependencies:
+      eslint: ">=5.0.0"
+    dependencies:
+      eslint: 8.19.0
     dev: true
 
   /eslint-plugin-prettier/4.2.1_7uxdfn2xinezdgvmbammh6ev5i:
@@ -14458,6 +14471,20 @@ packages:
         optional: true
     dev: true
 
+  /promise-inflight/1.0.1_bluebird@3.7.2:
+    resolution:
+      {
+        integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==,
+      }
+    peerDependencies:
+      bluebird: "*"
+    peerDependenciesMeta:
+      bluebird:
+        optional: true
+    dependencies:
+      bluebird: 3.7.2
+    dev: true
+
   /promise.allsettled/1.0.5:
     resolution:
       {
@@ -15571,10 +15598,10 @@ packages:
       inherits: 2.0.4
     dev: true
 
-  /rollup/2.75.7:
+  /rollup/2.76.0:
     resolution:
       {
-        integrity: sha512-VSE1iy0eaAYNCxEXaleThdFXqZJ42qDBatAwrfnPlENEZ8erQ+0LYX4JXOLPceWfZpV1VtZwZ3dFCuOZiSyFtQ==,
+        integrity: sha512-9jwRIEY1jOzKLj3nsY/yot41r19ITdQrhs+q3ggNWhr9TQgduHqANvPpS32RNpzGklJu3G1AJfvlZLi/6wFgWA==,
       }
     engines: { node: ">=10.0.0" }
     hasBin: true
@@ -17696,10 +17723,10 @@ packages:
       vfile: 4.2.1
     dev: true
 
-  /unimport/0.4.2_vite@2.9.13+webpack@5.73.0:
+  /unimport/0.4.4_vite@2.9.13+webpack@5.73.0:
     resolution:
       {
-        integrity: sha512-uYcKcSgislseRj/jy1RDCrMcdXiRBgk7rX6icdjrvF8MQLkv+Ncibm+3X2V9SBri5GiREAmyxLgjuyDXeAM8kA==,
+        integrity: sha512-gYWGl4LUIasAbV7PXCaByuB6NcerrHRIRICooXtAFI7JCGY74CYGVq080P/yg7C4AYs+RYuJQdYsaRAJvG7bsQ==,
       }
     dependencies:
       "@rollup/pluginutils": 4.2.1
@@ -17876,7 +17903,7 @@ packages:
       "@rollup/pluginutils": 4.2.1
       local-pkg: 0.4.1
       magic-string: 0.26.2
-      unimport: 0.4.2_vite@2.9.13+webpack@5.73.0
+      unimport: 0.4.4_vite@2.9.13+webpack@5.73.0
       unplugin: 0.7.1_vite@2.9.13+webpack@5.73.0
     transitivePeerDependencies:
       - esbuild
@@ -18171,7 +18198,7 @@ packages:
       "@rollup/pluginutils": 4.2.1
       "@types/eslint": 8.4.5
       eslint: 8.19.0
-      rollup: 2.75.7
+      rollup: 2.76.0
       vite: 2.9.13_sass@1.53.0
     dev: true
 
@@ -18214,16 +18241,16 @@ packages:
       esbuild: 0.14.48
       postcss: 8.4.14
       resolve: 1.22.1
-      rollup: 2.75.7
+      rollup: 2.76.0
       sass: 1.53.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.17.0_cdtdrpbinzephu7a7pfma7ouay:
+  /vitest/0.17.1_zlqyzx7ftk546j5lr4krmdk7hm:
     resolution:
       {
-        integrity: sha512-5YO9ubHo0Zg35mea3+zZAr4sCku32C3usvIH5COeJB48TZV/R0J9aGNtGOOqEWZYfOKP0pGZUvTokne3x/QEFg==,
+        integrity: sha512-d6NsFC6FPmZ5XdiSYfW5rwJ/b8060wqe2steNNlVbhO69HWma6CucIm5g7PXlCSkmKvrdEbUsZHPAarlH83VGw==,
       }
     engines: { node: ">=v14.16.0" }
     hasBin: true
@@ -18248,7 +18275,7 @@ packages:
       "@types/chai": 4.3.1
       "@types/chai-subset": 1.3.3
       "@types/node": 17.0.45
-      "@vitest/ui": 0.17.0
+      "@vitest/ui": 0.17.1
       c8: 7.11.3
       chai: 4.3.6
       debug: 4.3.4

@@ -26,7 +26,14 @@ module.exports = {
     "plugin:storybook/recommended",
     "./.eslintrc-auto-import.json",
   ],
-  plugins: ["react", "@typescript-eslint", "sonarjs", "prettier", "vitest"],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "sonarjs",
+    "prettier",
+    "vitest",
+    "prefer-arrow-functions",
+  ],
   ignorePatterns: ["/*.*"],
   settings: {
     react: {
@@ -88,7 +95,6 @@ module.exports = {
     ],
   },
   rules: {
-    "prefer-arrow-callback": "error",
     "@typescript-eslint/no-unused-expressions": [
       "error",
       {
@@ -102,7 +108,21 @@ module.exports = {
       // allow devDependencies to be imported into testing files, etc.
       { devDependencies: ["**/*.{test,spec,story,stories}.{ts,tsx}"] },
     ],
+    "prefer-arrow-functions/prefer-arrow-functions": [
+      "warn",
+      {
+        classPropertiesAllowed: true,
+        disallowPrototype: true,
+        returnStyle: "unchanged",
+      },
+    ],
     "arrow-body-style": "warn",
+    "prefer-arrow-callback": [
+      "warn",
+      {
+        allowNamedFunctions: true,
+      },
+    ],
     "react/self-closing-comp": "warn",
     "@typescript-eslint/quotes": "off",
     "@typescript-eslint/comma-dangle": "off",

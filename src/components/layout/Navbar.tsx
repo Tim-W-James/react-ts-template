@@ -1,11 +1,16 @@
 import logo from "@assets/svg/logo.svg";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import {
+  Container,
+  Nav,
+  Navbar as BSNavbar,
+  NavDropdown,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const PrimaryNavbar: React.FC = () => (
-  <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+const Navbar: React.FC = () => (
+  <BSNavbar bg="dark" variant="dark" expand="lg" sticky="top">
     <Container>
-      <Navbar.Brand as={Link} to="/">
+      <BSNavbar.Brand as={Link} to="/">
         <img
           alt=""
           src={logo}
@@ -14,9 +19,9 @@ const PrimaryNavbar: React.FC = () => (
           className="d-inline-block align-top"
         />{" "}
         project_title
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
+      </BSNavbar.Brand>
+      <BSNavbar.Toggle aria-controls="basic-navbar-nav" />
+      <BSNavbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           <Link className="nav-link" to="/">
             Home
@@ -37,9 +42,9 @@ const PrimaryNavbar: React.FC = () => (
             </Link>
           </NavDropdown>
         </Nav>
-      </Navbar.Collapse>
+      </BSNavbar.Collapse>
     </Container>
-  </Navbar>
+  </BSNavbar>
 );
 
-export default PrimaryNavbar;
+export default Navbar;
