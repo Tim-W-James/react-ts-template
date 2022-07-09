@@ -1,1 +1,1 @@
-export const PRIMARY_TITLE = "project_title123";
+export const PRIMARY_TITLE = "project_title";
