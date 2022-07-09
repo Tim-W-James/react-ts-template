@@ -9,7 +9,7 @@
   },
   "better-comments.tags": [
     {
-      "tag": "!123",
+      "tag": "!",
       "color": "#FF2D00",
       "strikethrough": false,
       "underline": false,
