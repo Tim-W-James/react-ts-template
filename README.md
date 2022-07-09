@@ -146,7 +146,7 @@ Complete the configuration checklist below and remove from the README once compl
   <!-- GitHub Actions Shield -->
   <a href="https://github.com/Tim-W-James/repo_name/actions"><img src="https://img.shields.io/github/workflow/status/Tim-W-James/repo_name/CI?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI"></a>
   <!-- Last Commit Shield -->
-  <a href="https://github.com/Tim-W-James/repo_name/commits/main"><img src="https://img.shields.io/github/last-commit/Tim-W-James/repo_name.svg?style=for-the-badge&logo=git&logoColor=white" alt="Release"></a>
+  <a href="https://github.com/Tim-W-James/repo_name/commits/main"><img src="https://img.shields.io/github/last-commit/Tim-W-James/repo_name.svg?style=for-the-badge&logo=git&logoColor=white" alt="Commit"></a>
   <!-- Renovate Shield -->
   <a href="https://github.com/Tim-W-James/repo_name/issues/1"><img src="https://img.shields.io/badge/-Renovate-black.svg?style=for-the-badge&logo=renovatebot&colorB=555" alt="Renovate"></a>
   <!-- Release Shield -->
