@@ -9,15 +9,15 @@ on:
     paths-ignore:
       - "**.md"
       - "**.txt"
-      - ".husky/"
-      - ".vscode/"
+      - ".husky/**"
+      - ".vscode/**"
   pull_request:
     branches: ["main"]
     paths-ignore:
       - "**.md"
       - "**.txt"
-      - ".husky/"
-      - ".vscode/"
+      - ".husky/**"
+      - ".vscode/**"
 
 jobs:
   build:
