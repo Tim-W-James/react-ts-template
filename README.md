@@ -347,7 +347,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 - **Storybook Stories**: place `stories` adjacent to source code
 - **SCSS Styling**:
   - Use [`index.scss`](./src/index.scss) for globals
-  - Place page or component specific styles adjacent to source code
+  - Place page or component specific styles adjacent to source code, using scoped `.modules`
 - **Global TypeScript Types**: [`./types`](./types)
 - **Web Accessible Files** (`robots.txt`, `manifest.json`, etc.): [`./public`](./public)
 - **Site Assets** (`favicon.svg`, images, etc.): [`./public/assets`](./public/assets). Has alias `@assets`
