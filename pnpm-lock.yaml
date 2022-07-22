@@ -47,7 +47,7 @@ specifiers:
   eslint-plugin-react: ^7.30.0
   eslint-plugin-react-hooks: ^4.5.0
   eslint-plugin-sonarjs: ^0.13.0
-  eslint-plugin-storybook: ^0.5.13
+  eslint-plugin-storybook: ^0.6.0
   eslint-plugin-vitest: ^0.0.8
   happy-dom: ^6.0.0
   http-server: ^14.1.1
@@ -138,7 +138,7 @@ devDependencies:
   eslint-plugin-react: 7.30.1_eslint@8.19.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.19.0
   eslint-plugin-sonarjs: 0.13.0_eslint@8.19.0
-  eslint-plugin-storybook: 0.5.13_4x5o4skxv6sl53vpwefgt23khm
+  eslint-plugin-storybook: 0.6.1_4x5o4skxv6sl53vpwefgt23khm
   eslint-plugin-vitest: 0.0.8_4x5o4skxv6sl53vpwefgt23khm
   happy-dom: 6.0.2
   http-server: 14.1.1_debug@4.3.4
@@ -6811,8 +6811,8 @@ packages:
       eslint: 8.19.0
     dev: true
 
-  /eslint-plugin-storybook/0.5.13_4x5o4skxv6sl53vpwefgt23khm:
-    resolution: {integrity: sha512-82x3FH1VAi68Awu1VEjn/hLkzFZsOP8ItcC5/uGF9WszIrj6n7Q3MZD57oE26k3aKwuPfFtAPnSjFnaBkBab+g==}
+  /eslint-plugin-storybook/0.6.1_4x5o4skxv6sl53vpwefgt23khm:
+    resolution: {integrity: sha512-RHbxn4jqbXQ4dkDHUjI6y47hxF6h+aCsIyuXLfmA1sTtFtea3o1p9taQcsnzOFEE/szgLXxH9jsig9yc//2hug==}
     engines: {node: 12.x || 14.x || >= 16}
     peerDependencies:
       eslint: '>=6'
