@@ -24,7 +24,7 @@
     "node": ">=16",
     "pnpm": ">=7"
   },
-  "packageManager": "pnpm@7.6.0",
+  "packageManager": "pnpm@7.8.0",
   "main": "src/main.ts",
   "private": "true",
   "scripts": {
