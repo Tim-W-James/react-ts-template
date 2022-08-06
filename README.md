@@ -8,20 +8,20 @@ starter app using Bootstrap Components and React Router 6.
 
 ### Template includes:
 
-- [React 17](https://reactjs.org/docs/getting-started.html): frontend framework
-- [Vite](https://vitejs.dev/config/): frontend build tool and dev server, configured in [`./vite.config.ts`](./vite.config.ts)
-- [TypeScript 4.7](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): types for js. Configured in [`./tsconfig.json`](./tsconfig.json)
-- [SASS](https://sass-lang.com/): CSS preprocessor
-- [ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code analyzer for TypeScript. Configured in [`./.eslintrc.cjs`](./.eslintrc.cjs) with rules from AirBnB and SonarJS
-- [Stylelint](https://stylelint.io/): Linter/code analyzer for SCSS. Configured in [`./.stylelintrc.cjs`](./.stylelintrc.cjs)
-- [Prettier](https://prettier.io/docs/en/configuration.html): Formatter. Configured in [`./.prettierrc.cjs`](./.prettierrc.cjs)
-- [Vitest](https://vitest.dev/config/): unit testing framework. Configured in [`./vite.config.ts` > `test`](./vite.config.ts#L52)
-- [Storybook](https://storybook.js.org/): view, document and test individual components and pages. Configured in [`./.storybook/main.cjs`](./.storybook/main.cjs)
-- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#configuration): global imports. Configured in [`./vite.config.ts` > `Plugins` > `AutoImport`](https://github.com/Tim-W-James/react-ts-template/blob/main/vite.config.ts#L19)
-- [pnpm](https://pnpm.io/): configuration for the `pnpm` package manager for better performance, lockfiles and monorepo support. See steps <a href="#todo">below</a> if you wish to use a different package manager.
-- `npm` scripts - run with `pnpm <script>` (or if you use a different package manager `yarn run <script>` or `npm run <script>`):
+- [![React 17](https://img.shields.io/badge/-React%2017-black?style=flat-square&logo=react)](https://reactjs.org/docs/getting-started.html): frontend framework
+- [![Vite](https://img.shields.io/badge/-Vite-black?style=flat-square&logo=vite)](https://vitejs.dev/config/): frontend build tool and dev server, configured in [`./vite.config.ts`](./vite.config.ts)
+- [![TypeScript 4.7](https://img.shields.io/badge/-TypeScript-black?style=flat-square&logo=typescript)](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): types for js. Configured in [`./tsconfig.json`](./tsconfig.json)
+- [![SASS](https://img.shields.io/badge/-SASS-black?style=flat-square&logo=sass)](https://sass-lang.com/): CSS preprocessor
+- [![ESLint](https://img.shields.io/badge/-ESLint-black?style=flat-square&logo=eslint)](https://eslint.org/docs/2.0.0/user-guide/configuring): Linter/code analyzer for TypeScript. Configured in [`./.eslintrc.cjs`](./.eslintrc.cjs) with rules from AirBnB and SonarJS
+- [![Stylelint](https://img.shields.io/badge/-Stylelint-black?style=flat-square&logo=stylelint)](https://stylelint.io/): Linter/code analyzer for SCSS. Configured in [`./.stylelintrc.cjs`](./.stylelintrc.cjs)
+- [![Prettier](https://img.shields.io/badge/-Prettier-black?style=flat-square&logo=prettier)](https://prettier.io/docs/en/configuration.html): Formatter. Configured in [`./.prettierrc.cjs`](./.prettierrc.cjs)
+- [![Vitest](https://img.shields.io/badge/-Vitest-black?style=flat-square&logo=vite)](https://vitest.dev/config/): unit testing framework. Configured in [`./vite.config.ts` > `test`](./vite.config.ts#L52)
+- [![Storybook](https://img.shields.io/badge/-Storybook-black?style=flat-square&logo=storybook)](https://storybook.js.org/): view, document and test individual components and pages. Configured in [`./.storybook/main.cjs`](./.storybook/main.cjs)
+- [![unplugin-auto-import](https://img.shields.io/badge/-Unplugin%20Auto%20Import-black?style=flat-square&logo=vite)](https://github.com/antfu/unplugin-auto-import#configuration): global imports. Configured in [`./vite.config.ts` > `Plugins` > `AutoImport`](https://github.com/Tim-W-James/react-ts-template/blob/main/vite.config.ts#L19)
+- [![pnpm](https://img.shields.io/badge/-pnpm-black?style=flat-square&logo=pnpm)](https://pnpm.io/): configuration for the `pnpm` package manager for better performance, lockfiles and monorepo support. See steps <a href="#todo">below</a> if you wish to use a different package manager.
+- [![npm](https://img.shields.io/badge/-npm-black?style=flat-square&logo=nodedotjs)](https://www.npmjs.com/) scripts - run with `pnpm run <script>`:
   - `dev` - starts a dev environment on localhost with Hot Module Reloading (automatically updates when source code changes)
-  - `dev:https` - starts a dev environment on localhost over https (requires [local development certificates to be generated](https://github.com/FiloSottile/mkcert))
+  - `dev:https` - starts a dev environment on localhost over https (requires [local development certificates to be generated](https://github.com/FiloSottile/mkcert), or use [vite-plugin-basic-ssl](https://github.com/vitejs/vite-plugin-basic-ssl) to auto generate certs)
   - `build` - compile production source code to [`./dist`](./dist)
   - `preview` - after build, preview on localhost
   - `lint` - evaluate ESLint rules against source code
@@ -31,10 +31,10 @@ starter app using Bootstrap Components and React Router 6.
   - `test` - run unit tests in watch mode (automatically reruns tests when source code changes)
   - `coverage` - run coverage tests and output results to [`./coverage`](./coverage)
   - `storybook` - launch [Storybook](https://storybook.js.org/) to view, document and test components and pages
-- [Husky](https://github.com/typicode/husky): pre-commit Git hooks to lint, format and run tests. Configured in [`./.husky`](./.husky)
-- [GitHub Actions](https://docs.github.com/en/actions): GitHub CI/CD pipeline. Configured in [`./.github/workflows`](./.github/workflows)
-- Starter React app with [Bootstrap 5](https://react-bootstrap.github.io/getting-started/introduction/) and [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)
-- [Renovate](https://github.com/marketplace/renovate): GitHub bot for automatic dependency updates. Configured in [`./renovate.json`](./renovate.json)
+- [![Husky](https://img.shields.io/badge/-Husky-black?style=flat-square&logo=git)](https://github.com/typicode/husky): pre-commit Git hooks to lint, format and run tests. Configured in [`./.husky`](./.husky)
+- [![Renovate](https://img.shields.io/badge/-Renovate-black?style=flat-square&logo=renovatebot)](https://github.com/marketplace/renovate): GitHub bot for automatic dependency updates. Configured in [`./renovate.json`](./renovate.json)
+- [![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-black?style=flat-square&logo=githubactions)](https://docs.github.com/en/actions): GitHub CI/CD pipeline. Configured in [`./.github/workflows`](./.github/workflows)
+- Starter React app with [![Bootstrap 5](https://img.shields.io/badge/-Bootstrap%205-black?style=flat-square&logo=bootstrap)](https://react-bootstrap.github.io/getting-started/introduction/) and [![React Router 6](https://img.shields.io/badge/-React%20Router%206-black?style=flat-square&logo=reactrouter)](https://reactrouter.com/docs/en/v6/getting-started/overview)
 - See the <a href="#project-structure">Project Structure</a>
 
 Complete the configuration checklist below and remove from the README once complete.
@@ -316,8 +316,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
   ```sh
   pnpm storybook
   ```
-
-  Note: initially, you may need to run this script twice to fix a caching error
 
 ### Code Style
 
