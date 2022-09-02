@@ -67,7 +67,7 @@ specifiers:
   readonly-types: ^3.0.0
   sass: ^1.54.3
   source-map-support: ^0.5.21
-  storybook-addon-react-router-v6: ^0.1.13
+  storybook-addon-react-router-v6: ^0.2.0
   storybook_vitest_addon: ^0.0.8
   stylelint: ^14.9.1
   stylelint-config-idiomatic-order: ^8.1.0
@@ -154,7 +154,7 @@ devDependencies:
   prettier: 2.7.1
   react-test-renderer: 18.2.0_react@18.2.0
   sass: 1.54.3
-  storybook-addon-react-router-v6: 0.1.13_q7a2mjoaaomc4ahmtdqyhsjckq
+  storybook-addon-react-router-v6: 0.2.1_q7a2mjoaaomc4ahmtdqyhsjckq
   storybook_vitest_addon: 0.0.8_4jw4gf676f7wsotn33iq7hzelq
   stylelint: 14.9.1
   stylelint-config-idiomatic-order: 8.1.0_stylelint@14.9.1
@@ -12585,8 +12585,8 @@ packages:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
     dev: true
 
-  /storybook-addon-react-router-v6/0.1.13_q7a2mjoaaomc4ahmtdqyhsjckq:
-    resolution: {integrity: sha512-yC7f8HnEi9+8/ei/beoBF4+8ydH2BpcT8UOlCdQWyu1zNeRyKQsRWSUOztPCcVlfWdUa3R5PLCm5cVC0ymtoXg==}
+  /storybook-addon-react-router-v6/0.2.1_q7a2mjoaaomc4ahmtdqyhsjckq:
+    resolution: {integrity: sha512-dwYLaE6/bsGnkTn1l5rb5SYIhv2xwwSeRkhWX86bihDWJjz/+NlWSN+r4Kp2WNMVN9vEhMleunXPiGJiFUn7Hg==}
     peerDependencies:
       '@storybook/addons': ^6.4.0
       '@storybook/api': ^6.4.0
