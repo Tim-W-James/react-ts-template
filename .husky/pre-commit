@@ -4,4 +4,3 @@
 # skip hooks with --no-verify
 npx lint-staged
 pnpm --if-present test:run
-pnpm --if-present storybook:smoke-test
