@@ -39,27 +39,27 @@ const ExampleForm: React.FC<{
     <Container>
       <h2>{heading}</h2>
       <hr />
-      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+      <Form noValidate onSubmit={handleSubmit} validated={validated}>
         <Row className="mb-3">
-          <Form.Group as={Col} md="6" controlId="firstNameInput">
+          <Form.Group as={Col} controlId="firstNameInput" md="6">
             <Form.Label>First name</Form.Label>
             <Form.Control
+              defaultValue="John"
+              placeholder="First name"
               required
               type="text"
-              placeholder="First name"
-              defaultValue="John"
             />
             <Form.Control.Feedback type="invalid">
               Please provide a valid email.
             </Form.Control.Feedback>
           </Form.Group>
-          <Form.Group as={Col} md="6" controlId="lastNameInput">
+          <Form.Group as={Col} controlId="lastNameInput" md="6">
             <Form.Label>Last name</Form.Label>
             <Form.Control
+              defaultValue="Doe"
+              placeholder="Last name"
               required
               type="text"
-              placeholder="Last name"
-              defaultValue="Doe"
             />
             <Form.Control.Feedback type="invalid">
               Please provide a valid email.
@@ -67,26 +67,26 @@ const ExampleForm: React.FC<{
           </Form.Group>
         </Row>
         <Row className="mb-3">
-          <Form.Group as={Col} md="6" controlId="emailInput">
+          <Form.Group as={Col} controlId="emailInput" md="6">
             <Form.Label>Email</Form.Label>
             <Form.Control
-              type="email"
               placeholder="example@example.com"
               required
+              type="email"
             />
             <Form.Control.Feedback type="invalid">
               Please provide a valid email.
             </Form.Control.Feedback>
           </Form.Group>
-          <Form.Group as={Col} md="6" controlId="usernameInput">
+          <Form.Group as={Col} controlId="usernameInput" md="6">
             <Form.Label>Username</Form.Label>
             <InputGroup hasValidation>
               <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
               <Form.Control
-                type="text"
-                placeholder="Username"
                 aria-describedby="inputGroupPrepend"
+                placeholder="Username"
                 required
+                type="text"
               />
               <Form.Control.Feedback type="invalid">
                 Please choose a username.
@@ -96,10 +96,10 @@ const ExampleForm: React.FC<{
         </Row>
         <Form.Group className="mb-3">
           <Form.Check
-            required
-            label="Agree to terms and conditions"
             feedback="You must agree before submitting."
             feedbackType="invalid"
+            label="Agree to terms and conditions"
+            required
           />
         </Form.Group>
         <Button type="submit">Submit form</Button>

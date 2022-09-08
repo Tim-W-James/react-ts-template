@@ -1,18 +1,18 @@
 const STATUS = {
-  HOVERED: "hovered",
-  NORMAL: "normal",
+  hovered: "hovered",
+  normal: "normal",
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Link = ({ page, children }: any) => {
-  const [status, setStatus] = useState(STATUS.NORMAL);
+  const [status, setStatus] = useState(STATUS.normal);
 
   const onMouseEnter = () => {
-    setStatus(STATUS.HOVERED);
+    setStatus(STATUS.hovered);
   };
 
   const onMouseLeave = () => {
-    setStatus(STATUS.NORMAL);
+    setStatus(STATUS.normal);
   };
 
   return (

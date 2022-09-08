@@ -127,6 +127,35 @@ module.exports = {
       },
     ],
     "react/self-closing-comp": "warn",
+    "react/jsx-sort-props": "warn",
+    "@typescript-eslint/switch-exhaustiveness-check": "warn",
+    "@typescript-eslint/naming-convention": [
+      "warn",
+      {
+        selector: "default",
+        format: ["camelCase"],
+      },
+      {
+        selector: "variable",
+        format: ["PascalCase", "camelCase", "UPPER_CASE"],
+      },
+      {
+        selector: "parameter",
+        format: ["camelCase"],
+        leadingUnderscore: "allow",
+      },
+      {
+        selector: "memberLike",
+        modifiers: ["private"],
+        format: ["camelCase"],
+        leadingUnderscore: "require",
+      },
+      {
+        selector: "typeLike",
+        format: ["PascalCase"],
+      },
+    ],
+    "@typescript-eslint/no-shadow": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/quotes": "off",
     "@typescript-eslint/comma-dangle": "off",

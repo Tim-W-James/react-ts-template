@@ -12,28 +12,28 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Page content={<Home />} />} />
+        <Route element={<App />} path="/">
+          <Route element={<Page content={<Home />} />} index />
           <Route
-            path="form"
             element={
               <Page
                 content={<ExampleForm heading={"Example Form"} />}
                 title="Example Form"
               />
             }
+            path="form"
           />
           <Route
-            path="dropdown/1"
             element={<Page content={<h2>Dropdown 1</h2>} title="Dropdown 1" />}
+            path="dropdown/1"
           />
           <Route
-            path="dropdown/2"
             element={<Page content={<h2>Dropdown 2</h2>} title="Dropdown 2" />}
+            path="dropdown/2"
           />
           <Route
-            path="*"
             element={<Page content={<NotFound />} title="Not Found" />}
+            path="*"
           />
         </Route>
       </Routes>

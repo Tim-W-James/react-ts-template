@@ -8,9 +8,9 @@ const Home: React.FC = () => {
   return (
     <div className={styles["home"]}>
       <header>
-        <img src={logo} className={styles["home-logo"]} alt="logo" />
+        <img alt="logo" className={styles["home-logo"]} src={logo} />
         <p>
-          <Button type="button" onClick={() => setCount((c) => c + 1)}>
+          <Button onClick={() => setCount((c) => c + 1)} type="button">
             count is: {count}
           </Button>
         </p>
@@ -21,8 +21,8 @@ const Home: React.FC = () => {
           <a
             className={styles["home-link"]}
             href="https://reactjs.org"
-            target="_blank"
             rel="noopener noreferrer"
+            target="_blank"
           >
             Learn React
           </a>
@@ -30,8 +30,8 @@ const Home: React.FC = () => {
           <a
             className={styles["home-link"]}
             href="https://vitejs.dev/guide/features.html"
-            target="_blank"
             rel="noopener noreferrer"
+            target="_blank"
           >
             Vite Docs
           </a>
@@ -39,8 +39,8 @@ const Home: React.FC = () => {
           <a
             className={styles["home-link"]}
             href="https://react-bootstrap.github.io/getting-started/introduction/"
-            target="_blank"
             rel="noopener noreferrer"
+            target="_blank"
           >
             React Bootstrap Docs
           </a>
@@ -48,8 +48,8 @@ const Home: React.FC = () => {
           <a
             className={styles["home-link"]}
             href="https://reactrouter.com/docs/en/v6/getting-started/overview"
-            target="_blank"
             rel="noopener noreferrer"
+            target="_blank"
           >
             React Router 6 Docs
           </a>
