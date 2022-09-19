@@ -155,6 +155,17 @@ module.exports = {
         format: ["PascalCase"],
       },
     ],
+    "max-len": [
+      "warn",
+      {
+        code: 80,
+        tabWidth: 2,
+        ignoreUrls: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
+    curly: "warn",
+    "object-shorthand": "warn",
     "@typescript-eslint/no-shadow": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/quotes": "off",
