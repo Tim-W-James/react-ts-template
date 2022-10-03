@@ -111,6 +111,13 @@ module.exports = {
       // allow devDependencies to be imported into testing files, etc.
       { devDependencies: ["**/*.{test,spec,story,stories}.{ts,tsx}"] },
     ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        argsIgnorePattern: "^_",
+      },
+    ],
+    "require-await": "warn",
     "prefer-arrow-functions/prefer-arrow-functions": [
       "warn",
       {
