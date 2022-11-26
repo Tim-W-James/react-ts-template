@@ -58,4 +58,7 @@ export default defineConfig({
     },
     passWithNoTests: true,
   },
+  server: {
+    port: 3000,
+  },
 });

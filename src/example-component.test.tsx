@@ -6,6 +6,7 @@ const toJson = (component: renderer.ReactTestRenderer) => {
   const result = component.toJSON();
   expect(result).toBeDefined();
   expect(result).not.toBeInstanceOf(Array);
+
   return result as renderer.ReactTestRendererJSON;
 };
 
@@ -16,16 +17,16 @@ test("Link changes the class when hovered", () => {
   let tree = toJson(component);
   expect(tree).toMatchSnapshot();
 
-  // manually trigger the callback
+  // Manually trigger the callback
   tree.props["onMouseEnter"]();
 
-  // re-rendering
+  // Re-rendering
   tree = toJson(component);
   expect(tree).toMatchSnapshot();
 
-  // manually trigger the callback
+  // Manually trigger the callback
   tree.props["onMouseLeave"]();
-  // re-rendering
+  // Re-rendering
   tree = toJson(component);
   expect(tree).toMatchSnapshot();
 });

@@ -9,6 +9,7 @@ interface FormElements extends HTMLFormControlsCollection {
   usernameInput: HTMLInputElement;
   emailInput: HTMLInputElement;
 }
+
 interface UserFormElement extends HTMLFormElement {
   readonly elements: FormElements;
 }
